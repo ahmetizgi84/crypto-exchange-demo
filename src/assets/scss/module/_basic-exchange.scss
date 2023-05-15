@@ -1,0 +1,71 @@
+.basic-exchange-header {
+  // padding: 12px 10px;
+  margin-bottom: 12px;
+  background-color: var(--c-palegray);
+}
+
+.basic-exchange-content {
+  margin-bottom: 12px;
+}
+
+.basic-exchange-table-container {
+  margin-bottom: 12px;
+}
+
+.basic-exchange button.basic-exchange-button {
+  height: 28px;
+  border: none;
+  background: #eff2f6;
+  color: #4a4a4a;
+  font-weight: 400;
+  border-radius: 5px;
+}
+
+// .basic-exchange button.basic-exchange-button:hover {
+//   text-decoration: none;
+//   background: #26a69a;
+//   color: #fff;
+// }
+
+.basic-exchange button.active {
+  background: #9caabd;
+  color: var(--c-white);
+}
+
+.basic-exchange button.buy,
+.basic-exchange button.sell {
+  background: var(--c-buttonBuy);
+  color: #fff;
+  text-transform: uppercase;
+  padding: 6px;
+  margin-top: 16px;
+  margin-bottom: 12px;
+  width: 100%;
+  box-shadow: 0px 0px 15px 0px #26de81ad;
+}
+
+.basic-exchange button.sell {
+  background: var(--c-buttonSell);
+  box-shadow: 0px 0px 15px 0px #ff231fad;
+}
+
+.basic-exchange-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+@media only screen and (max-width: 380px) {
+  .basic-exchange-table {
+    display: block;
+  }
+}
+
+.basic-exchange .ant-input-prefix,
+.basic-exchange .ant-input-suffix {
+  font-size: 12px;
+  color: var(--c-textPale);
+}
+
+.basic-exchange .ant-input[disabled] {
+  color: var(--c-contrastblack);
+}

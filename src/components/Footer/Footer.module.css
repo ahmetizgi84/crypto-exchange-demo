@@ -1,0 +1,21 @@
+.footerLink {
+  color: var(--c-footerlinkcolor);
+  transition: 0.3s;
+}
+
+.footerLinkDark {
+  color: var(--c-footerlinkcolor);
+  transition: 0.3s;
+}
+
+.footerLink:hover {
+  text-decoration: none;
+  color: var(--c-contrastblack);
+  transition: 0.2s;
+}
+
+.footerLinkDark:hover {
+  text-decoration: none;
+  color: var(--c-dirtywhite);
+  transition: 0.2s;
+}

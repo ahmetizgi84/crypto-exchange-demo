@@ -1,0 +1,74 @@
+.history-order .nav {
+  background: #f5f9fc;
+}
+.history-order .nav-link {
+  color: #4a4a4a;
+  padding: 10px 13px;
+}
+
+.history-order .nav-link.active {
+  color: var(--c-blue);
+  background: transparent;
+}
+
+.history-order thead tr th,
+.history-order tbody tr td {
+  font-weight: 400;
+  color: #4a4a4a;
+}
+
+// .history-order tbody {
+//   //height: 315px;
+//   // overflow-y: auto;
+//   // display: block;
+// }
+
+.history-order td {
+  padding: 8px 15px !important;
+  font-size: 13px;
+}
+
+.history-order tr {
+  clear: both;
+  overflow: hidden;
+}
+
+.history-order {
+  border: 1px solid var(--c-border);
+  border-radius: 2px;
+  min-height: 445px;
+}
+
+.ant-table-tbody > tr > td {
+  border: none !important;
+}
+
+.ant-table-title {
+  padding: 8px 15px !important;
+  text-align: end;
+}
+
+.ant-table-title span {
+  font-size: 13px !important;
+}
+
+// .history-order table td {
+//   padding: 0.45rem 0.9rem;
+// }
+
+// soon
+
+.woynex-table-empty-text {
+  color: rgba(0, 0, 0, 0.25);
+  margin-top: 8px;
+}
+
+.ant-tabs-nav {
+  background: #f5f9fc;
+}
+
+.ant-tabs-tab {
+  color: #4a4a4a;
+  padding: 10px 13px !important;
+  margin: 0px !important;
+}

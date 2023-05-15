@@ -1,0 +1,52 @@
+[
+    {
+        "class": "red-bg",
+        "price": 3,
+        "quantity": 1
+    },
+    {
+        "class": "red-bg-5",
+        "price": 5,
+        "quantity": 12
+    },
+    {
+        "class": "red-bg-8",
+        "price": 15,
+        "quantity": 4
+    },
+    {
+        "class": "red-bg-40",
+        "price": 50,
+        "quantity": 10
+    },
+    {
+        "class": "red-bg-8",
+        "price": 16,
+        "quantity": 4
+    },
+    {
+        "class": "red-bg-40",
+        "price": 100,
+        "quantity": 12
+    },
+    {
+        "class": "red-bg-80",
+        "price": 500,
+        "quantity": 10
+    },
+    {
+        "class": "red-bg-20",
+        "price": 3,
+        "quantity": 12
+    },
+    {
+        "class": "red-bg-8",
+        "price": 5,
+        "quantity": 12
+    },
+    {
+        "class": "red-bg-40",
+        "price": 5,
+        "quantity": 12
+    }
+]

@@ -1,0 +1,32 @@
+.title{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.pd {
+    padding: 40px 0px 26px 0px;
+}
+.desc{
+    color: var(--c-orange);
+    font-size: 14px;
+}
+
+.reset{
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+}
+
+.linkContainer{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+}

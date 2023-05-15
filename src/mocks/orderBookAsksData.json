@@ -1,0 +1,52 @@
+[
+    {
+        "class": "green-bg-5",
+        "price": 3,
+        "quantity": 1
+    },
+    {
+        "class": "green-bg-8",
+        "price": 5,
+        "quantity": 12
+    },
+    {
+        "class": "green-bg-40",
+        "price": 15,
+        "quantity": 4
+    },
+    {
+        "class": "green-bg",
+        "price": 50,
+        "quantity": 10
+    },
+    {
+        "class": "green-bg-8",
+        "price": 16,
+        "quantity": 4
+    },
+    {
+        "class": "green-bg-40",
+        "price": 100,
+        "quantity": 12
+    },
+    {
+        "class": "green-bg-80",
+        "price": 500,
+        "quantity": 10
+    },
+    {
+        "class": "green-bg-40",
+        "price": 3,
+        "quantity": 12
+    },
+    {
+        "class": "green-bg-8",
+        "price": 5,
+        "quantity": 12
+    },
+    {
+        "class": "green-bg-20",
+        "price": 5,
+        "quantity": 12
+    }
+]

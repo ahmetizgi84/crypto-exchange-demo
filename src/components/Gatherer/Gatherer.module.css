@@ -1,0 +1,22 @@
+.container {
+  background-color: #f8f8f8ad;
+}
+
+.mySpinnerContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 30%;
+}
+
+.logo {
+  position: absolute;
+  margin-top: 3px;
+  margin-left: 6px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 54px;
+}

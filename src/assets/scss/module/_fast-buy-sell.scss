@@ -1,0 +1,60 @@
+.fast-buy-sell .ant-card-head-wrapper {
+  margin-bottom: 12px;
+}
+
+.fast-buy-sell .ant-card-head {
+  border: none;
+}
+
+.fast-buy-sell .exchange-bar {
+  padding: 10px 10px;
+  background-color: #fafafa;
+}
+
+.fast-buy-sell button.buy,
+.fast-buy-sell button.sell {
+ background: var(--c-buy-grey);
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px;
+  margin-top: 30px;
+  width: 100%;
+  box-shadow: 0px 0px 15px 0px #26de81ad;
+}
+
+.fast-buy-sell button.sell {
+  background: var(--c-red);
+  box-shadow: 0px 0px 15px 0px #ff231fad;
+}
+
+.fast-buy-sell .ant-tabs-nav {
+  background-color: #fafafa;
+}
+
+.fast-buy-sell button.fast-buy-sell-button {
+  height: 32px;
+  border: none;
+  background: #eff2f6;
+  color: #4a4a4a;
+  font-weight: 300;
+  border-radius: 5px;
+}
+
+.fast-buy-sell button.fast-buy-sell-button:hover {
+  text-decoration: none;
+  background: #26a69a;
+  color: #fff;
+}
+
+.fast-buy-sell .exchange-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa;
+  padding: 0px 11px;
+}
+
+.fast-buy-sell .exchange-total-price {
+  font-size: 16px;
+  font-weight: 700;
+}

@@ -1,0 +1,71 @@
+.openBoxContainer {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  height: 45px;
+  padding: 6px 12px;
+  align-items: center;
+  width: 100%;
+  /* justify-content: space-between; */
+}
+
+.openBoxContainer:hover {
+  /* border-color: #043e5b; */
+  border-color: #ff7800;
+  cursor: pointer;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.coinIcon {
+  width: 32px;
+}
+
+.asset {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.center {
+  padding-left: 10px;
+  flex: auto;
+}
+
+.centerWithoutCoin {
+  padding-left: 10px;
+}
+
+.leftWithoutCoin {
+  display: flex;
+  flex: auto;
+  align-items: center;
+}
+
+.assetWithoutCoin {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.plainText {
+  flex: auto;
+}
+
+.plainTextEmpty {
+  flex: auto;
+  color: #b7bdc6;
+}
+
+.disabledOpenBoxContainer {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  height: 45px;
+  padding: 6px 12px;
+  align-items: center;
+  width: 100%;
+  background-color: #e9ecef;
+  /* justify-content: space-between; */
+}

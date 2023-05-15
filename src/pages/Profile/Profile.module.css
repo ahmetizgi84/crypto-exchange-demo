@@ -1,0 +1,60 @@
+.confirmed {
+  height: 26px;
+  background-color: #54b489;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.muted {
+  height: 26px;
+  background-color: #9da6b4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.4);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.active {
+  height: 26px;
+  background-color: #3c78e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.rejected {
+  height: 26px;
+  background-color: #e85e59;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.pending {
+  height: 26px;
+  background-color: #e8af59;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+
+.subtitle{
+  margin-left: 5px;
+}

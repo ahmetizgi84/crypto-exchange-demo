@@ -1,0 +1,13 @@
+.listItem {
+  cursor: pointer;
+  border: none;
+}
+
+.listItem:hover {
+  /* background-color: rgb(235, 235, 235); */
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 14px -6px;
+}
+
+.customCheckbox {
+  height: 13px;
+}

@@ -1,0 +1,1028 @@
+.dark,
+.dark header {
+  background: #131722;
+}
+.dark .light-bb,
+.dark .input-group-text,
+.dark .nav-tabs {
+  border: none;
+  border-bottom: 1px solid var(--c-cloudyBlack);
+}
+.dark .market-trade .nav-tabs {
+  border: none;
+}
+.dark header nav a {
+  color: var(--c-white) !important;
+}
+.dark header .active {
+  color: var(--c-blue) !important;
+}
+
+.dark header nav a:hover {
+  color: var(--c-blue);
+}
+.dark .nav-tabs .nav-link .active {
+  background: transparent;
+}
+.dark header nav a.btn:hover {
+  color: var(--c-white);
+}
+.dark header nav .nav-item.active a {
+  color: var(--c-blue);
+}
+.dark .market-pairs {
+  border: 1px solid var(--c-cloudyBlack);
+  background: #131722;
+}
+.dark .market-bar {
+  border: 1px solid var(--c-cloudyBlack);
+  background: #131722;
+  padding-bottom: 14px;
+}
+.dark tr {
+  background: #131722;
+}
+.dark .market-pairs .table td,
+.dark .market-pairs .table th {
+  border-top: 1px solid var(--c-cloudyBlack);
+}
+.dark .market-history .table td,
+.dark .market-history .table th {
+  border-top: 1px solid var(--c-cloudyBlack);
+}
+.dark .order-book thead tr {
+  border-bottom: 1px solid var(--c-cloudyBlack);
+}
+.dark .order-book tbody tr,
+.dark .order-book tbody td {
+  border: none;
+}
+.dark .order-book,
+.dark .market-history,
+.dark .market-news {
+  border: 1px solid var(--c-cloudyBlack);
+}
+.dark tbody tr:hover {
+  background: var(--c-cloudyBlack);
+  color: var(--c-cloudyBlack);
+}
+.dark thead tr th {
+  color: var(--c-white);
+}
+.dark .form-control::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #69727a;
+}
+.dark .form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #69727a;
+}
+.dark .form-control:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #69727a;
+}
+.dark .form-control:-moz-placeholder {
+  /* Firefox 18- */
+  color: #69727a;
+}
+.dark tbody tr {
+  color: var(--c-white);
+}
+.dark thead th,
+.dark .market-pairs .nav-link {
+  color: #4f5966;
+}
+.dark .market-pairs .nav-link.active,
+.dark #STAR i {
+  color: var(--c-white);
+}
+.dark .green {
+  color: var(--c-buy-grey);
+}
+.dark .red {
+  color: var(--c-red);
+}
+.dark .market-pairs .nav {
+  background: #1c2030;
+}
+.dark .market-pairs input,
+.dark .market-pairs span {
+  border-color: var(--c-cloudyBlack);
+  background: var(--c-cloudyBlack);
+}
+.dark .market-pairs input {
+  color: var(--c-white);
+}
+.dark .heading {
+  background: #1c2030;
+  color: var(--c-white);
+}
+.dark .ob-heading tr {
+  border-top: 1px solid var(--c-cloudyBlack) !important;
+  border-bottom: 1px solid var(--c-cloudyBlack) !important;
+}
+.dark .ob-heading tr:hover {
+  background: #131722;
+  cursor: default;
+}
+.dark .ob-heading span {
+  color: #4f5966;
+}
+.dark .dropdown-menu {
+  background: #131722;
+  box-shadow: 0 0 10px 0 #131722;
+  border: 1px solid var(--c-cloudyBlack);
+}
+.dark .dropdown-item:focus,
+.dark .dropdown-item:hover {
+  background-color: var(--c-cloudyBlack);
+  color: var(--c-white);
+}
+.dark .market-history .nav {
+  background: #1c2030;
+}
+.dark .market-history .nav-link.active {
+  color: var(--c-white);
+}
+.dark .market-history .nav-link {
+  color: #4f5966;
+}
+.dark .red-bg-80:after,
+.dark .red-bg-60:after,
+.dark .red-bg-40:after,
+.dark .red-bg-20:after,
+.dark .red-bg-10:after,
+.dark .red-bg-8:after,
+.dark .red-bg-5:after,
+.dark .red-bg:after {
+  background: #ff231f63;
+}
+.dark .market-news {
+  background: #131722;
+}
+.dark .market-news li {
+  border-bottom: 1px solid var(--c-cloudyBlack);
+}
+.dark .market-news li:hover {
+  background: var(--c-cloudyBlack);
+}
+.dark .market-news li strong,
+.dark .market-news li a {
+  color: #c5cbce;
+}
+.dark .market-order {
+  background: #131722;
+}
+.dark .no-data i,
+.dark .no-data {
+  color: var(--c-cloudyBlack);
+}
+.dark .market-trade {
+  border: 1px solid var(--c-cloudyBlack);
+  background: #131722;
+}
+.dark .market-trade .nav .nav-item .nav-link.active {
+  background: transparent;
+  color: var(--c-white);
+}
+.dark .market-trade .nav .nav-item .nav-link {
+  color: #4f5966;
+}
+.dark .market-trade p {
+  color: #c5cbce;
+}
+.dark .market-trade-list li a {
+  background: var(--c-cloudyBlack);
+  color: var(--c-white);
+}
+.dark .market-trade input {
+  border: 1px solid var(--c-cloudyBlack);
+  background: var(--c-cloudyBlack);
+  color: var(--c-white);
+}
+.dark .form-access select {
+  border: 1px solid var(--c-cloudyBlack);
+  background: var(--c-cloudyBlack);
+  color: var(--c-white);
+}
+
+.dark .form-default select {
+  border: 1px solid var(--c-cloudyBlack);
+  background: var(--c-cloudyBlack);
+  color: var(--c-white);
+}
+.dark .market-trade .input-group-text {
+  background: var(--c-cloudyBlack);
+  color: var(--c-white);
+  border-color: var(--c-cloudyBlack);
+}
+.dark .market-trade-buy .market-trade-list li a:hover {
+  background: var(--c-buy-grey);
+  color: #fff;
+}
+.dark .market-trade-sell .market-trade-list li a:hover {
+  background: var(--c-red);
+  color: #fff;
+}
+.dark #darkDepthChart {
+  background: #131722;
+}
+.dark .markets {
+  background: #131722;
+}
+.dark .table td,
+.dark table th {
+  border-top: 1px solid var(--c-cloudyBlack);
+}
+.dark .markets-pair-list .nav {
+  background: #1c2030;
+}
+.dark .markets-pair-list .nav-link.active,
+.dark #STAR i {
+  color: var(--c-white);
+}
+.dark thead th,
+.dark .markets-pair-list .nav-link {
+  color: #4f5966;
+}
+.dark .markets-pair-list .load-more {
+  border: 1px solid var(--c-cloudyBlack);
+  color: var(--c-white);
+}
+.dark .markets-pair-list .load-more:hover {
+  color: #fff;
+  border: 1px solid var(--c-blue);
+}
+.dark .markets-content h2,
+.dark .markets-content p {
+  color: var(--c-white);
+}
+.dark .markets-content span.green,
+.dark .markets-content span.red {
+  color: #fff;
+}
+.dark .market-trade-sell {
+  border-left: 1px solid var(--c-cloudyBlack);
+}
+.dark .markets-container {
+  background: #1e222d;
+}
+.dark .sign-up-form h3 {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 15px;
+}
+.dark header nav .nav-item.active a.btn:hover {
+  color: #fff;
+}
+
+.dark .custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: var(--c-blue);
+  background-color: var(--c-blue);
+}
+
+.dark .dropdown-menu::before {
+  background: #131722;
+  border-top: 1px solid var(--c-cloudyBlack);
+  border-left: 1px solid var(--c-cloudyBlack);
+}
+
+.dark .dropdown-menu p {
+  color: var(--c-white);
+}
+
+.dark .dropdown-header {
+  border-bottom: 1px solid var(--c-cloudyBlack);
+}
+.dark .dropdown-footer {
+  border-top: 1px solid var(--c-cloudyBlack);
+}
+
+.dark .header-img-icon .profile-nav .nav-item .nav-link:hover {
+  background-color: var(--c-cloudyBlack);
+  color: var(--c-white);
+}
+
+.dark .form-control,
+.dark .settings-profile select {
+  background-color: var(--c-cloudyBlack);
+  border: 1px solid var(--c-cloudyBlack) !important;
+  color: var(--c-white);
+}
+
+.dark .form-control,
+.dark .custom-select select {
+  background-color: var(--c-cloudyBlack);
+  border: 1px solid var(--c-cloudyBlack) !important;
+  color: var(--c-white);
+}
+
+.dark .custom-select {
+  background-color: var(--c-cloudyBlack);
+  border: 1px solid var(--c-cloudyBlack) !important;
+  color: var(--c-white);
+}
+
+.dark .form-access form {
+  padding: 30px;
+  border-radius: 5px;
+  min-width: 350px;
+  box-shadow: 0 0 10px 0 #131722;
+  border: 1px solid var(--c-cloudyBlack);
+}
+.dark .form-access h2,
+.dark .form-access {
+  color: var(--c-white);
+}
+
+.dark .form-access .custom-control-label::before {
+  border: var(--c-cloudyBlack) solid 1px;
+  background-color: var(--c-cloudyBlack);
+}
+
+.dark .error-page a {
+  border: 1px solid var(--c-cloudyBlack);
+  color: var(--c-white);
+}
+.dark .error-page a:hover {
+  border: 1px solid var(--c-blue);
+  background: var(--c-blue);
+  color: var(--c-white);
+}
+
+.dark .error-page h2,
+.dark .error-page p {
+  color: #c5cbce;
+}
+
+.dark .wallet .nav-pills a,
+.dark .wallet-history {
+  border-top: 1px solid var(--c-cloudyBlack);
+}
+.dark .wallet .nav {
+  background: #1e222d;
+}
+.dark .wallet h2,
+.dark .wallet h3,
+.dark .wallet h4,
+.dark .wallet p {
+  color: var(--c-white) !important;
+}
+.dark .wallet button.green,
+.dark .wallet button.red,
+.dark .wallet .nav-pills a.active h2,
+.dark .wallet .nav-pills a.active h3,
+.dark .wallet .nav-pills a.active p {
+  color: var(--c-white);
+}
+
+.dark .wallet .tab-content li {
+  border-bottom: 1px solid var(--c-cloudyBlack);
+}
+.dark .wallet-history tr {
+  background: #1e222d;
+}
+.dark .wallet-address input,
+.dark .wallet-address input:focus {
+  border: 1px solid var(--c-cloudyBlack);
+  background: var(--c-cloudyBlack);
+  box-shadow: none;
+  color: var(--c-white);
+}
+.dark .depth-chart-inner {
+  border: 1px solid var(--c-cloudyBlack);
+}
+
+.dark .markets-capital-item {
+  box-shadow: 0 0 10px 0 #131722;
+  border: 1px solid var(--c-cloudyBlack);
+}
+
+.dark .markets-capital-item h2,
+.dark .markets-capital-item h4 {
+  color: #fff;
+}
+
+.dark .settings .card {
+  background: #1e222d;
+}
+
+.dark .settings .card-title {
+  color: #fff;
+}
+
+.dark .card-header-title {
+  color: #fff;
+}
+
+.dark .settings-nav {
+  background: #1e222d;
+}
+
+.dark .settings-nav .nav-link {
+  color: var(--c-white);
+}
+
+.dark .settings label {
+  color: #fff !important;
+}
+.dark .settings .custom-file-label {
+  background: var(--c-cloudyBlack);
+  border: 1px solid var(--c-cloudyBlack);
+  color: #616d75;
+}
+
+.dark .settings-profile input[type="submit"] {
+  border: 1px solid var(--c-blue);
+}
+
+// notifications
+.dark .settings-notification li {
+  border-bottom: 1px solid var(--c-cloudyBlack);
+}
+.dark .settings-notification li:last-child {
+  border-bottom: 0;
+}
+.dark .settings-notification p {
+  color: var(--c-white);
+}
+.dark .settings-notification span {
+  color: #4f5966;
+}
+
+.dark .notification {
+  background-color: var(--c-cloudyBlack);
+}
+
+.dark .notification-title {
+  color: var(--c-white);
+}
+
+.dark .market-carousel-item {
+  border: 1px solid var(--c-cloudyBlack);
+}
+.dark .market-carousel-item {
+  color: #fff;
+}
+.dark .market-carousel-item .btn.buy:hover,
+.dark .market-carousel-item .btn.sell:hover {
+  color: #fff;
+  border-color: #fff;
+}
+.dark .news-details,
+.dark .page-content {
+  color: #fff;
+}
+
+.dark .footer {
+  color: #fff;
+}
+
+.dark .balance-title {
+  color: #fff;
+  font-size: 24px;
+}
+
+.dark .balance-value {
+  color: #fff;
+}
+
+.dark .login-activity-border {
+  border-bottom: 1px solid var(--c-cloudyBlack);
+}
+
+// soon
+
+.dark .ant-tabs-nav {
+  background: #1c2030;
+}
+
+.dark .history-order {
+  border: 1px solid var(--c-cloudyBlack);
+  background: #131722;
+  min-height: 445px;
+}
+
+.dark .ant-tabs-top > .ant-tabs-nav::before {
+  border: 1px solid var(--c-cloudyBlack);
+}
+
+.dark .ant-table-small .ant-table-thead > tr > th {
+  background: #1c2030;
+}
+
+.dark .ant-table-tbody > tr.ant-table-placeholder:hover > td {
+  background: #131722;
+}
+
+.dark .woynex-table-empty-text {
+  color: #6c757d;
+}
+
+.dark .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #fff;
+}
+
+.dark .ant-tabs-ink-bar {
+  background: #fff;
+}
+
+.dark .ant-alert-info {
+  background-color: #1c2030;
+  border: 1px solid var(--c-cloudyBlack);
+}
+
+.dark .ant-alert-message {
+  color: #fff;
+}
+
+.dark .highcharts-background {
+  background: #131722 !important;
+}
+
+// change email
+.dark .change-email-form {
+  border: 1px solid var(--c-cloudyBlack);
+  background: #1e222d;
+}
+
+.dark .change-email-form .change-email-subtitle {
+  color: var(--c-cloudyWhite);
+}
+.dark .change-email-form .change-email-label {
+  color: var(--c-cloudyWhite);
+}
+
+.dark .ant-alert-warning svg {
+  color: #faad14 !important;
+}
+
+// .dark .ant-alert-warning {
+//   background-color: #8d8247;
+//   border: 1px solid #8d8247;
+// }
+
+.dark .alert-content h5 {
+  color: var(--c-contrastblack);
+}
+
+// 2a2e39
+.dark .reset-form-title {
+  color: #fff;
+}
+
+// ant modal
+.dark .ant-modal-content {
+  background: #1e222d;
+
+  & .ant-modal-header {
+    background: #1e222d;
+    border-bottom: 1px solid var(--c-cloudyBlack);
+    & .ant-modal-title {
+      color: var(--c-white);
+    }
+  }
+
+  & label {
+    color: var(--c-white);
+  }
+  & .ant-modal-footer {
+    border-top: 1px solid var(--c-cloudyBlack);
+  }
+}
+
+.dark .ant-modal-confirm-body .ant-modal-confirm-title {
+  color: var(--c-white);
+}
+.dark .ant-modal-confirm-body .ant-modal-confirm-content {
+  color: var(--c-white);
+}
+
+.dark .anticon svg {
+  color: var(--c-white);
+}
+.dark .ant-form-item-label label {
+  color: var(--c-white);
+}
+.dark .ant-form-item-extra {
+  color: var(--c-white);
+}
+
+//input dark mode
+.dark .ant-input {
+  background-color: var(--c-cloudyBlack);
+  border: 1px solid var(--c-inputBorder);
+  color: #fff;
+}
+
+.dark .ant-input-affix-wrapper {
+  background-color: var(--c-cloudyBlack);
+  border: 1px solid var(--c-cloudyBlack) !important;
+}
+
+.dark .ant-input-password-icon {
+  color: #afafaf;
+}
+
+.dark .ant-form-item-has-error :not(.ant-input-disabled):not(.ant-input-borderless).ant-input,
+.ant-form-item-has-error
+  :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper,
+.ant-form-item-has-error :not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover,
+.ant-form-item-has-error
+  :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper:hover {
+  background-color: var(--c-cloudyBlack);
+  //border-color: var(--c-blue);
+  &:hover {
+    background-color: var(--c-cloudyBlack);
+    // border-color: var(--c-blue);
+  }
+}
+// select dark mode
+
+.dark .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  background-color: var(--c-cloudyBlack);
+  border: 1px solid var(--c-inputBorder);
+}
+
+// select dropdown
+.dark .ant-select-dropdown {
+  background-color: #131722;
+}
+.dark .ant-select-arrow {
+  color: var(--c-white);
+}
+
+.dark .ant-select-item-option-content {
+  color: var(--c-white);
+  &:hover {
+    color: var(--c-white);
+    //color: rgba(0, 0, 0, 0.85);
+  }
+}
+
+.dark .ant-select-item-option-selected {
+  & .ant-select-item-option-content {
+    color: rgba(0, 0, 0, 0.85);
+  }
+}
+.dark .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+  background-color: var(--c-cloudyBlack);
+}
+
+// select modal
+.dark .modal-content {
+  background-color: #1e222d;
+  & .modal-header {
+    border-bottom: 1px solid var(--c-cloudyBlack);
+  }
+  & button {
+    color: var(--c-white);
+  }
+  & .networkList-container {
+    border-bottom: 1px solid var(--c-cloudyBlack);
+    &:hover {
+      background-color: var(--c-cloudyBlack) !important;
+    }
+  }
+  & .coinList-container {
+    color: var(--c-white);
+    &:hover {
+      background-color: var(--c-cloudyBlack) !important;
+    }
+  }
+  & .addressBookList-container {
+    border-bottom: 1px solid var(--c-cloudyBlack);
+    &:hover {
+      background-color: var(--c-cloudyBlack) !important;
+    }
+  }
+}
+
+.dark .ant-checkbox-wrapper > span {
+  color: #fff;
+}
+
+.dark .woynex-login-form > h6 {
+  color: #fff;
+}
+
+.dark .ant-picker {
+  background-color: var(--c-cloudyBlack);
+  border: 1px solid var(--c-cloudyBlack);
+}
+
+.dark .ant-picker-suffix {
+  color: #afafaf;
+}
+
+.dark .ant-picker-panel-container {
+  background-color: var(--c-cloudyBlack);
+}
+
+.dark .ant-picker-header button {
+  color: #fff !important;
+}
+
+.dark .ant-picker-header {
+  border-bottom: 1px solid #131722;
+}
+
+.dark .ant-picker-cell {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.dark .ant-picker-cell-in-view {
+  color: rgba(255, 255, 255, 1);
+}
+
+.dark .ant-picker-panel .ant-picker-footer {
+  border-top: 1px solid #131722;
+}
+.dark .ant-picker-input > input {
+  color: #fff;
+}
+
+.dark .ant-picker-cell-inner:hover {
+  background: var(--c-buy-grey) !important;
+}
+
+.dark .react-tel-input .form-control {
+  background-color: var(--c-cloudyBlack);
+}
+
+.dark .react-tel-input .flag-dropdown {
+  background-color: var(--c-cloudyBlack);
+  border: none;
+  border-right: 1px solid #131722;
+}
+
+// VipLevel page
+.dark .vip-level-title {
+  color: var(--c-cloudyWhite);
+}
+
+.dark .vip-level h4 {
+  color: var(--c-cloudyWhite);
+}
+.dark .vip-level-card h6 {
+  color: var(--c-cloudyWhite);
+}
+
+.dark .vip-level-header {
+  color: #fff;
+}
+
+.dark .vip-level-text {
+  color: #fff;
+}
+
+.dark .vip-level-card-title {
+  color: #fff;
+}
+.dark .vip-level-card {
+  background-color: var(--c-cardBg);
+  border: 0;
+}
+.dark .vip-level .card-title {
+  color: #fff;
+}
+
+/* FAST-BUY-SELL PAGE */
+
+.dark .fast-buy-sell .fast-buy-sell-card {
+  background-color: #1e222d;
+  border: none;
+}
+.dark .privacy {
+  h1, h6, span, p {
+    color: var(--c-white);
+  }
+}
+.dark .fast-buy-sell .ant-card-head-title {
+  color: var(--c-white);
+}
+
+.dark .fast-buy-sell .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  position: relative;
+  background-color: var(--c-cloudyBlack);
+  border: 1px solid var(--c-cloudyBlack);
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.dark .fast-buy-sell .ant-select-arrow {
+  color: #bfbfbf;
+}
+
+.dark .fast-buy-sell .ant-select-dropdown .ant-select-dropdown-placement-bottomLeft {
+  background-color: #bfbfbf !important;
+}
+
+.dark .fast-buy-sell .exchange-bar {
+  background-color: var(--c-cloudyBlack);
+}
+
+.dark .fast-buy-sell .exchange-title {
+  color: var(--c-white);
+}
+
+.dark .fast-buy-sell .exchange-balance-info {
+  color: var(--c-white);
+}
+
+.dark button.fast-buy-sell-button {
+  background-color: var(--c-cloudyBlack);
+  color: var(--c-white);
+}
+
+.dark .fast-buy-sell .ant-select-selection-item {
+  color: #6c757d;
+}
+
+.dark .fast-buy-sell .ant-input-suffix {
+  color: #6c757d;
+}
+
+.dark .fast-buy-sell .exchange-total {
+  background-color: var(--c-cloudyBlack);
+}
+
+.dark .fast-buy-sell .exchange-total-price {
+  color: var(--c-white);
+}
+
+/* BASIC EXCHANGE PAGE */
+.dark .basic-exchange .ant-input[disabled] {
+  color: var(--c-white);
+}
+
+/* SECURITY SETTINGS */
+.dark .sub-title {
+  color: var(--c-white);
+}
+.dark .security-notification li .span {
+  color: #6c757d;
+}
+.dark .security-notification .icon {
+  fill: #6c757d;
+}
+.dark .settings small {
+  color: #6c757d;
+}
+
+.dark .start-earning p {
+  color: var(--c-white);
+}
+.dark .basic-exchange table tr td {
+  color: var(--c-white);
+}
+
+.dark .basic-exchange-header {
+  background-color: var(--c-darkBlack);
+}
+
+// .dark .basic-exchange .ant-select-selector {
+//   background-color: #1c2030 !important;
+//   border: 1px solid var(--c-cloudyBlack) !important;
+// }
+
+//dropdown-menu icon
+.dark .dropdown-menu-icon {
+  color: var(--c-blue);
+  background-color: var(--c-cloudyBlack);
+}
+.dark .dropdown-menu .nav-link:hover {
+  background-color: var(--c-cloudyBlack);
+}
+//profile- company info
+.dark .personInfo {
+  border-bottom: 1px solid var(--c-cloudyBlack);
+}
+
+//security
+.dark .security-notification li {
+  border-bottom: 1px solid var(--c-cloudyBlack);
+}
+
+//footer
+
+.dark .footer-wrapper--title {
+  color: var(--c-white);
+}
+.dark .footer-wrapper--socialMedia-icon {
+  background-color: #3e4862;
+  &:hover {
+    background-color: #272e41;
+  }
+}
+
+.dark .footer-container p {
+  color: var(--c-cloudyWhite);
+}
+.dark .title-widget {
+  color: var(--c-cloudyWhite);
+}
+
+.dark .widget-social.style-1 a {
+  background-color: var(--c-cloudyBlack);
+  color: var(--c-cloudyWhite);
+
+  &:hover {
+    background-color: #272e41;
+  }
+}
+
+// wallet
+//border
+.dark .border-bottom {
+  border-bottom: 1px solid var(--c-cloudyBlack) !important;
+}
+.dark .card-component-container {
+  background: #1e222d;
+}
+.desc {
+  color: var(--c-white);
+}
+//input border
+.openBox-container {
+  border: 1px solid var(--c-cloudyBlack) !important;
+}
+
+// form
+.dark .form-access .form-group input,
+.form-access input {
+  color: var(--c-white);
+}
+
+.dark .form-default .form-group input,
+.form-default input {
+  color: var(--c-white);
+}
+
+//page-wide
+//text color
+.dark .dark-text-white,
+.dark .ant-col .ant-form-item-label {
+  color: var(--c-white);
+}
+
+.ant-form-item-required {
+  color: var(--c-white);
+}
+.dark .nav-tabs .nav-link.active {
+  color: var(--c-white);
+  background: #1e222d;
+}
+
+//Referral
+.dark .info {
+  background-color: var(--c-cloudyBlack);
+  color: var(--c-white);
+}
+.dark .info-text {
+  color: var(--c-white);
+}
+
+.dark .referral-totalReferral {
+  background-color: var(--c-cloudyBlack);
+  color: var(--c-white);
+  & h3 {
+    color: var(--c-white);
+  }
+}
+
+// ant-steps (Authenticator)
+.dark .ant-steps-item-process .ant-steps-item-container .ant-steps-item-content .ant-steps-item-title,
+.dark .ant-steps-item-process .ant-steps-item-container .ant-steps-item-content .ant-steps-item-description {
+  color: var(--c-white);
+}
+
+.dark .ant-steps-item-wait .ant-steps-item-container .ant-steps-item-content .ant-steps-item-title,
+.dark .ant-steps-item-wait .ant-steps-item-container .ant-steps-item-content .ant-steps-item-description {
+  color: var(--c-textPale);
+}
+.dark .ant-steps-item-finish .ant-steps-item-container .ant-steps-item-content .ant-steps-item-title {
+  color: var(--c-white);
+}
+.dark .ant-steps-item-finish .ant-steps-item-container .ant-steps-item-content .ant-steps-item-description {
+  color: var(--c-textPale);
+}
+.dark .ant-steps-item-icon .anticon svg {
+  color: var(--c-blue);
+}
+
+//google authenticator
+.dark .change-email-form .google-auth-store-link:hover {
+  background-color: #131722;
+}
+
+.dark .ant-result-title {
+  color: var(--c-white);
+}
+.dark .ant-result-subtitle {
+  color: var(--c-textPale);
+}
+.dark .ant-result .anticon svg {
+  color: var(--c-buy-grey);
+}

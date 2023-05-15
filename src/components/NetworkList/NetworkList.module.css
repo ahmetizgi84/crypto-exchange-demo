@@ -1,0 +1,20 @@
+.listContainer {
+  padding: 14px 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.listContainer:hover {
+  cursor: pointer;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.title {
+  color: #474d57;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.subTitle {
+  color: #707a8a;
+}

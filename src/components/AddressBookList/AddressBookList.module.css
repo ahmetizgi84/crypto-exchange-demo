@@ -1,0 +1,33 @@
+.listContainer {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+
+.listContainer:hover {
+  cursor: pointer;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 16px;
+  color: #1e2329;
+}
+
+.addressContainer {
+  display: flex;
+}
+
+.subTitle {
+  margin-right: 8px;
+  color: #707a8a;
+}
+
+.address {
+  color: #474d57;
+  font-weight: 600;
+}

@@ -1,0 +1,85 @@
+.landing-first-section {
+  position: relative;
+  z-index: 1;
+  //height: 90vh;
+  background-image: url(https://woynex.com/img/coming-soon.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &::before {
+    z-index: -1;
+    //background: linear-gradient(-9deg, #d62a2abd 0%, #294642 40%, #753069 100%);
+    //opacity: 0.8;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+  }
+}
+
+.landing-first-section h1 {
+  color: var(--c-white);
+}
+
+.landing-first-section .ant-tabs-top > .ant-tabs-nav,
+.landing-first-section .ant-tabs-bottom > .ant-tabs-nav,
+.landing-first-section .ant-tabs-top > div > .ant-tabs-nav,
+.landing-first-section .ant-tabs-bottom > div > .ant-tabs-nav {
+  margin: 0 !important;
+}
+
+.landing-second-section {
+  background-color: #3c78e0;
+}
+
+.section-two-box {
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-two-box h1,
+.section-two-box p {
+  color: var(--c-white);
+}
+
+.landing-third-section {
+  background-color: #171c29;
+}
+
+.landing-third-section h1,
+.landing-third-section p {
+  color: var(--c-white);
+}
+
+.third-section-trade {
+  position: relative;
+  z-index: 1;
+  //height: 90vh;
+  &::before {
+    background-image: url("../../images/trade.png");
+    // background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    //background: linear-gradient(-9deg, #d62a2abd 0%, #294642 40%, #753069 100%);
+    //opacity: 0.8;
+    position: absolute;
+    left: 0;
+    top: -0;
+    width: 100%;
+    height: 100%;
+    content: "";
+  }
+}
+
+.card-content {
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

@@ -1,0 +1,32 @@
+.headerLink {
+  white-space: nowrap;
+}
+
+.headerBtnContainer {
+  padding: 0px !important;
+}
+
+.headerBtnContainer button:after {
+  display: none;
+}
+
+.headerBtnContainer button:focus {
+  box-shadow: none;
+}
+
+.headerBtnContainer .dropdown-body {
+  padding: 10px 0 0;
+}
+
+.headerBtnContainer .profile-nav {
+  padding-bottom: 11px;
+}
+
+.headerBtnContainer .profile-nav .nav-item .nav-link {
+  font-size: 14px;
+  padding: 5px 20px;
+}
+
+.headerButton {
+  font-size: 14px;
+}

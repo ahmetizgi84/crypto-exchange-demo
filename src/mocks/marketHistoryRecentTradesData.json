@@ -1,0 +1,52 @@
+[
+    {
+        "price": 3,
+        "time": "Mon May 15 2023 14:36:37 GMT+0300 (GMT+03:00)",
+        "quantity": 2
+    },
+    {
+        "price": 3,
+        "time": "Mon May 15 2023 14:36:35 GMT+0300 (GMT+03:00)",
+        "quantity": 2
+    },
+    {
+        "price": 23,
+        "time": "Mon May 15 2023 14:36:30 GMT+0300 (GMT+03:00)",
+        "quantity": 2
+    },
+    {
+        "price": 32,
+        "time": "Mon May 15 2023 14:36:27 GMT+0300 (GMT+03:00)",
+        "quantity": 2
+    },
+    {
+        "price": 234,
+        "time": "Mon May 15 2023 14:36:20 GMT+0300 (GMT+03:00)",
+        "quantity": 2
+    },
+    {
+        "price": 13,
+        "time": "Mon May 15 2023 14:36:10 GMT+0300 (GMT+03:00)",
+        "quantity": 2
+    },
+    {
+        "price": 233,
+        "time": "Mon May 15 2023 14:36:00 GMT+0300 (GMT+03:00)",
+        "quantity": 2
+    },
+    {
+        "price": 3,
+        "time": "Mon May 15 2023 14:35:57 GMT+0300 (GMT+03:00)",
+        "quantity": 2
+    },
+    {
+        "price": 12,
+        "time": "Mon May 15 2023 14:35:47 GMT+0300 (GMT+03:00)",
+        "quantity": 2
+    },
+    {
+        "price": 342,
+        "time": "Mon May 15 2023 14:35:37 GMT+0300 (GMT+03:00)",
+        "quantity": 2
+    }
+]

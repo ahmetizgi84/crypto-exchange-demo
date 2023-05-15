@@ -1,0 +1,178 @@
+[
+    {
+        "symbol": "USDT",
+        "s": "USDT",
+        "image": "https://cryptologos.cc/logos/tether-usdt-logo.svg?v=025",
+        "lastPrice": 1.25,
+        "priceChangePercent": 12,
+        "isFavorite": true
+    },
+    {
+        "symbol": "BTC",
+        "s": "BTC",
+        "image": "https://cryptologos.cc/logos/bitcoin-btc-logo.svg?v=025",
+        "lastPrice": 11234,
+        "priceChangePercent": -2,
+        "isFavorite": false
+    },
+    {
+        "symbol": "ETH",
+        "s": "ETH",
+        "image": "https://cryptologos.cc/logos/ethereum-eth-logo.svg?v=025",
+        "lastPrice": 4256,
+        "priceChangePercent": 2.5,
+        "isFavorite": false
+    },
+    {
+        "symbol": "BNB",
+        "s": "BNB",
+        "image": "https://cryptologos.cc/logos/bnb-bnb-logo.svg?v=025",
+        "lastPrice": 123,
+        "priceChangePercent": 4,
+        "isFavorite": false
+    },
+    {
+        "symbol": "USDC",
+        "s": "USDC",
+        "image": "https://cryptologos.cc/logos/usd-coin-usdc-logo.svg?v=025",
+        "lastPrice": 20.76,
+        "priceChangePercent": 8,
+        "isFavorite": false
+    },
+    {
+        "symbol": "MATIC",
+        "s": "MATIC",
+        "image": "https://cryptologos.cc/logos/polygon-matic-logo.svg?v=025",
+        "lastPrice": 120.76,
+        "priceChangePercent": -1,
+        "isFavorite": false
+    },
+    {
+        "symbol": "AVAX",
+        "s": "AVAX",
+        "image": "https://cryptologos.cc/logos/avalanche-avax-logo.svg?v=025",
+        "lastPrice": 47.98,
+        "priceChangePercent": -1.56,
+        "isFavorite": false
+    },
+    {
+        "symbol": "SHIB",
+        "s": "SHIB",
+        "image": "https://cryptologos.cc/logos/shiba-inu-shib-logo.svg?v=025",
+        "lastPrice": 4.8,
+        "priceChangePercent": -3.67,
+        "isFavorite": true
+    },
+    {
+        "symbol": "APE",
+        "s": "APE",
+        "image": "https://cryptologos.cc/logos/apecoin-ape-ape-logo.svg?v=025",
+        "lastPrice": 14.8,
+        "priceChangePercent": 3.67,
+        "isFavorite": false
+    },
+    {
+        "symbol": "AAVE",
+        "s": "AAVE",
+        "image": "https://cryptologos.cc/logos/aave-aave-logo.svg?v=025",
+        "lastPrice": 4.3,
+        "priceChangePercent": 3.13,
+        "isFavorite": false
+    },
+    {
+        "symbol": "TRON",
+        "s": "TRON",
+        "image": "https://cryptologos.cc/logos/tron-trx-logo.svg?v=025",
+        "lastPrice": 12.3,
+        "priceChangePercent": -3.13,
+        "isFavorite": false
+    },
+    {
+        "symbol": "SOLANA",
+        "s": "SOLANA",
+        "image": "https://cryptologos.cc/logos/solana-sol-logo.svg?v=025",
+        "lastPrice": 14,
+        "priceChangePercent": -1.4,
+        "isFavorite": false
+    },
+    {
+        "symbol": "DAI",
+        "s": "DAI",
+        "image": "https://cryptologos.cc/logos/multi-collateral-dai-dai-logo.svg?v=025",
+        "lastPrice": 4,
+        "priceChangePercent": 10,
+        "isFavorite": false
+    },
+    {
+        "symbol": "LINK",
+        "s": "LINK",
+        "image": "https://cryptologos.cc/logos/chainlink-link-logo.svg?v=025",
+        "lastPrice": 4,
+        "priceChangePercent": 1.24,
+        "isFavorite": false
+    },
+    {
+        "symbol": "BCH",
+        "s": "BCH",
+        "image": "https://cryptologos.cc/logos/bitcoin-cash-bch-logo.svg?v=025",
+        "lastPrice": 1.24,
+        "priceChangePercent": -8,
+        "isFavorite": false
+    },
+    {
+        "symbol": "CAKE",
+        "s": "CAKE",
+        "image": "https://cryptologos.cc/logos/pancakeswap-cake-logo.svg?v=025",
+        "lastPrice": 0.25,
+        "priceChangePercent": -0.1,
+        "isFavorite": false
+    },
+    {
+        "symbol": "CVX",
+        "s": "CVX",
+        "image": "https://cryptologos.cc/logos/convex-finance-cvx-logo.svg?v=025",
+        "lastPrice": 0.25,
+        "priceChangePercent": 5,
+        "isFavorite": false
+    },
+    {
+        "symbol": "DASH",
+        "s": "DASH",
+        "image": "https://cryptologos.cc/logos/dash-dash-logo.svg?v=025",
+        "lastPrice": 0.25,
+        "priceChangePercent": 3.5,
+        "isFavorite": false
+    },
+    {
+        "symbol": "FRAX",
+        "s": "FRAX",
+        "image": "https://cryptologos.cc/logos/frax-share-fxs-logo.svg?v=025",
+        "lastPrice": 0.25,
+        "priceChangePercent": 2.4,
+        "isFavorite": false
+    },
+    {
+        "symbol": "ENJ",
+        "s": "ENJ",
+        "image": "https://cryptologos.cc/logos/enjin-coin-enj-logo.svg?v=025",
+        "lastPrice": 0.25,
+        "priceChangePercent": -2,
+        "isFavorite": false
+    },
+    {
+        "symbol": "HEX",
+        "s": "HEX",
+        "image": "https://cryptologos.cc/logos/hex-hex-logo.svg?v=025",
+        "lastPrice": 0.25,
+        "priceChangePercent": -3.5,
+        "isFavorite": false
+    },
+    {
+        "symbol": "SUSHI",
+        "s": "SUSHI",
+        "image": "https://cryptologos.cc/logos/sushiswap-sushi-logo.svg?v=025",
+        "lastPrice": 0.25,
+        "priceChangePercent": 8,
+        "isFavorite": false
+    }
+]
