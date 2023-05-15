@@ -1,18 +1,18 @@
-import { useContext, useState, useEffect } from "react";
-import { Container, Row, Col, Table, Button } from "react-bootstrap";
-import { CashCoin } from "react-bootstrap-icons";
-import { Link } from "react-router-dom";
-import { Context as AuthContext } from "../../context/AuthContext";
-import ThemeContext from "../../context/ThemeContext";
-import ApiContext from "../../context/ApiContext";
-import excahngeApi from "../../api/exchangeApi";
-import DataContext from "../../context/DataContext";
-import _ from "lodash";
-import { WoynexTable } from "../../components";
+import { useContext, useState, useEffect } from 'react';
+import { Container, Row, Col, Table } from 'react-bootstrap';
+import { CashCoin } from 'react-bootstrap-icons';
+import { Link } from 'react-router-dom';
+import { Context as AuthContext } from '../../context/AuthContext';
+import ThemeContext from '../../context/ThemeContext';
+import ApiContext from '../../context/ApiContext';
+// import excahngeApi from "../../api/exchangeApi";
+import DataContext from '../../context/DataContext';
+// import _ from "lodash";
+import { WoynexTable } from '../../components';
 
 const VipLevel = () => {
   const {
-    state: { isLoggedIn },
+    state: { isLoggedIn }
   } = useContext(AuthContext);
   return <Container className="py-5">{isLoggedIn ? <LoggedInUser /> : <GuestUser />}</Container>;
 };
@@ -24,42 +24,42 @@ function LoggedInUser() {
   const { user, _getCommissionLevelList, commissionLevelList } = useContext(ApiContext);
   const [userCommissionLevel, setUserCommissionLevel] = useState([]);
   const {
-    state: { isLoggedIn },
+    state: { isLoggedIn }
   } = useContext(AuthContext);
   const { loading } = useContext(ApiContext);
   const columns = [
     {
-      title: "Level",
-      dataIndex: "name",
-      key: "tradingBtcvolume4Last30Days",
+      title: 'Level',
+      dataIndex: 'name',
+      key: 'tradingBtcvolume4Last30Days'
     },
     {
-      title: "30 days Stop trading volume (BTC)",
-      dataIndex: "tradingBtcvolume4Last30Days",
-      key: "tradingBtcvolume4Last30Days",
+      title: '30 days Stop trading volume (BTC)',
+      dataIndex: 'tradingBtcvolume4Last30Days',
+      key: 'tradingBtcvolume4Last30Days'
     },
     {
-      title: "or",
-      dataIndex: "or",
-      key: "or",
-      render: (or) => "or",
+      title: 'or',
+      dataIndex: 'or',
+      key: 'or',
+      render: () => 'or'
     },
     {
-      title: "BNB Balance",
-      dataIndex: "e",
-      render: (e) => ">= 0 BNB",
+      title: 'BNB Balance',
+      dataIndex: 'e',
+      render: () => '>= 0 BNB'
     },
     {
-      title: "Maker / Taker",
-      dataIndex: "makerFeeRate",
-      key: "symbol",
+      title: 'Maker / Taker',
+      dataIndex: 'makerFeeRate',
+      key: 'symbol'
     },
     {
-      title: "Maker / Taker 25% Discount",
-      dataIndex: "Discount",
-      key: "Discount",
-      render: (text, record, index) => (record.makerFeeRate * 0.25).toFixed(2),
-    },
+      title: 'Maker / Taker 25% Discount',
+      dataIndex: 'Discount',
+      key: 'Discount',
+      render: (text, record) => (record.makerFeeRate * 0.25).toFixed(2)
+    }
   ];
 
   useEffect(() => {
@@ -141,16 +141,16 @@ function LoggedInUser() {
       </Row>
 
       <Row className="mb-5 py-2">
-        {userCommissionLevel?.map((level) => {
+        {userCommissionLevel?.map(level => {
           return (
             <Col key={level.id} md={4} xs={12} className="text-center">
-              <div className={level.hasPrivilege ? "vip-level-card" : "vip-level-card-muted"}>
-                <CashCoin size={48} color={level.hasPrivilege ? "green" : "gray"} />
+              <div className={level.hasPrivilege ? 'vip-level-card' : 'vip-level-card-muted'}>
+                <CashCoin size={48} color={level.hasPrivilege ? 'green' : 'gray'} />
                 <h4 className="mt-2">Fee Discount</h4>
                 <h6>{level.name}</h6>
                 <h6>Fee Rate</h6>
                 <h6>{level.makerFeeRate}</h6>
-                <h6>{level.hasPrivilege ? "Available" : `Available in ${level.name}`}</h6>
+                <h6>{level.hasPrivilege ? 'Available' : `Available in ${level.name}`}</h6>
               </div>
             </Col>
           );
@@ -169,7 +169,7 @@ function LoggedInUser() {
             columns={columns}
             list={userCommissionLevel}
             size="small"
-            rowKey={(record) => record.orderId}
+            rowKey={record => record.orderId}
             pageSize={5}
             loading={loading}
             isLoggedIn={isLoggedIn}
@@ -217,14 +217,14 @@ function GuestUser() {
               </tr>
             </thead>
             <tbody>
-              {commissionLevelListPage?.map((level) => (
+              {commissionLevelListPage?.map(level => (
                 <tr key={level.id}>
                   <td>{level.name}</td>
                   <td>
-                    {"<"} {level.tradingBtcvolume4Last30Days} BTC
+                    {'<'} {level.tradingBtcvolume4Last30Days} BTC
                   </td>
                   <td>or</td>
-                  <td>{">="} 0 BNB</td>
+                  <td>{'>='} 0 BNB</td>
                   <td>
                     {level.makerFeeRate}% / {level.takerFeeRate}%
                   </td>
@@ -246,11 +246,11 @@ function GuestUser() {
       </Row>
 
       <Row className="mb-5 py-2">
-        {commissionLevelListPage?.map((level) => {
+        {commissionLevelListPage?.map(level => {
           return (
             <Col key={level.id} md={4} xs={12} className="text-center">
               <div className="vip-level-card">
-                <CashCoin size={48} color={theme === "light" ? "gray" : "white"} />
+                <CashCoin size={48} color={theme === 'light' ? 'gray' : 'white'} />
                 <h4 className="mt-2">Fee Discount</h4>
                 <h6>{level.name}</h6>
                 <h6>Fee Rate</h6>

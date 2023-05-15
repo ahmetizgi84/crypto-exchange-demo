@@ -105,26 +105,26 @@ function AuthorizedPersonInfo() {
 
           <Row >
             <Col md={6} xs={12}>
-              <div className={cn([, "personInfo"])}>
+              <div className={cn(["personInfo"])}>
                     <label className="text-muted">First name:</label>
                     <h5 className={cn([styles.subtitle, "card-title mb-0"])}>{user?.name || ""}</h5>
               </div>
-              <div className={cn([, "personInfo"])} > 
+              <div className={cn(["personInfo"])} > 
                   <label className="text-muted">Last name:</label>
                   <h5 className={cn([styles.subtitle, "card-title mb-0"])}>{user?.surname || ""}</h5>
               </div>
-              <div className={cn([, "personInfo"])}>
+              <div className={cn(["personInfo"])}>
               <label className="text-muted">Identification No:</label>
               <h5 className={cn([styles.subtitle, "card-title mb-0"])}>{user?.identificationNo || "-"}</h5>
               </div>
             </Col>
 
             <Col md={6} xs={12}>
-            <div className={cn([, "personInfo"])}>
+            <div className={cn(["personInfo"])}>
                 <label className="text-muted">Address:</label>
                 <h5 className={cn([styles.subtitle, "card-title mb-0"])}>{user?.address || "-"}</h5>
               </div>
-              <div className={cn([, "personInfo align-items-center justify-content-between"])}>
+              <div className={cn(["personInfo align-items-center justify-content-between"])}>
                 <div className="d-flex align-items-start">
                   <label className="text-muted" htmlFor="emailAddress">
                 Email:
@@ -138,7 +138,7 @@ function AuthorizedPersonInfo() {
                   Change
                 </AntButton>
               </div>
-              <div className={cn([, "personInfo align-items-center justify-content-between"])}>
+              <div className={cn(["personInfo align-items-center justify-content-between"])}>
                   <div className="d-flex align-items-start">
                     <label className="text-muted" htmlFor="phoneNumber">
                        Phone:

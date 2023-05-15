@@ -1,25 +1,25 @@
-import { useContext, useEffect, useState } from "react";
-import { Row, Col } from "react-bootstrap";
-import ApiContext from "../../context/ApiContext";
-import { Context as AuthContext } from "../../context/AuthContext";
-import { WoynexTable } from "../../components";
-import { DatePicker as AntDatePicker, Select, Button as AntButton } from "antd";
-import _ from "lodash";
-import Moment from "react-moment";
-import { currencyFormatter } from "../../helper/currencyFormatter";
+import { useContext, useEffect, useState } from 'react';
+import { Row, Col } from 'react-bootstrap';
+import ApiContext from '../../context/ApiContext';
+import { Context as AuthContext } from '../../context/AuthContext';
+import { WoynexTable } from '../../components';
+import { DatePicker as AntDatePicker, Select, Button as AntButton } from 'antd';
+import _ from 'lodash';
+import Moment from 'react-moment';
+import { currencyFormatter } from '../../helper/currencyFormatter';
 
 const { Option } = Select;
 
 const TradeHistory = () => {
   const [startTime, setStartTime] = useState(new Date());
   const [endTime, setEndTime] = useState(new Date());
-  const [pair, setPair] = useState("");
-  const [side, setSide] = useState("");
+  const [pair, setPair] = useState('');
+  const [side, setSide] = useState('');
   //const [currencyCode, setCurrencyCode] = useState("All");
   const { user, _getPairList, pairList, _getTradeHistory, tradeHistory, loading, setTradeHistory } =
     useContext(ApiContext);
   const {
-    state: { isLoggedIn },
+    state: { isLoggedIn }
   } = useContext(AuthContext);
 
   useEffect(() => {
@@ -35,8 +35,8 @@ const TradeHistory = () => {
         tenantId: user.tenantId,
         createdUserId: user.userId,
         pair,
-        side,
-      },
+        side
+      }
     };
 
     _getTradeHistory(payload);
@@ -44,44 +44,44 @@ const TradeHistory = () => {
 
   const columns = [
     {
-      title: "Time",
-      dataIndex: "time",
+      title: 'Time',
+      dataIndex: 'time',
       sorter: true,
-      render: (time) => <Moment date={time} format="DD.MM.YYYY hh:mm:ss" />,
-      key: "time",
+      render: time => <Moment date={time} format="DD.MM.YYYY hh:mm:ss" />,
+      key: 'time'
     },
     {
-      title: "Pair",
-      dataIndex: "pair",
+      title: 'Pair',
+      dataIndex: 'pair',
       sorter: true,
-      key: "pair",
+      key: 'pair'
     },
     {
-      title: "Side",
-      dataIndex: "side",
-      key: "side",
-      sorter: true,
+      title: 'Side',
+      dataIndex: 'side',
+      key: 'side',
+      sorter: true
     },
     {
-      title: "Price",
-      dataIndex: "price",
-      render: (price) => currencyFormatter(price),
-      key: "price",
+      title: 'Price',
+      dataIndex: 'price',
+      render: price => currencyFormatter(price),
+      key: 'price'
     },
     {
-      title: "Executed Qty",
-      dataIndex: "executedQty",
-      key: "executedQty",
+      title: 'Executed Qty',
+      dataIndex: 'executedQty',
+      key: 'executedQty'
     },
     {
-      title: "Total",
-      dataIndex: "total",
-      key: "total",
-    },
+      title: 'Total',
+      dataIndex: 'total',
+      key: 'total'
+    }
   ];
 
   const handleTableChange = (pagination, filters, sorter) => {
-    const orderedList = _.orderBy(tradeHistory, sorter.field, sorter.order === "ascend" ? "asc" : "desc");
+    const orderedList = _.orderBy(tradeHistory, sorter.field, sorter.order === 'ascend' ? 'asc' : 'desc');
     setTradeHistory(orderedList);
   };
 
@@ -97,16 +97,16 @@ const TradeHistory = () => {
     }
   }
 
-  const handleOnPair = (value) => {
+  const handleOnPair = value => {
     setPair(value);
   };
 
-  const handleOnSide = (value) => {
+  const handleOnSide = value => {
     setSide(value);
   };
 
   function onSearchSelect(val) {
-    console.log("search:", val);
+    console.log('search:', val);
   }
 
   return (
@@ -140,8 +140,7 @@ const TradeHistory = () => {
                     optionFilterProp="children"
                     onChange={handleOnPair}
                     onSearch={onSearchSelect}
-                    filterOption={(input, option) => option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
-                  >
+                    filterOption={(input, option) => option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}>
                     {pairList.map((pair, idx) => (
                       <Option key={idx} value={pair.symbol}>
                         {pair.symbol}
@@ -161,8 +160,7 @@ const TradeHistory = () => {
                     optionFilterProp="children"
                     onChange={handleOnSide}
                     onSearch={onSearchSelect}
-                    filterOption={(input, option) => option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
-                  >
+                    filterOption={(input, option) => option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}>
                     <Option value="">All</Option>
                     <Option value="Buy">Buy</Option>
                     <Option value="Sell">Sell</Option>
@@ -190,7 +188,7 @@ const TradeHistory = () => {
               list={tradeHistory}
               size="small"
               onChange={handleTableChange}
-              rowKey={(record) => record.id}
+              rowKey={record => record.id}
               pageSize={8}
               loading={loading}
               isLoggedIn={isLoggedIn}

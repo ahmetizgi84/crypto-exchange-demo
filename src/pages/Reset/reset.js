@@ -1,57 +1,47 @@
-import { useContext, createRef } from 'react'
-import { ResetPasswordSchema } from "../../utils/formValidations";
-import { useFormik } from 'formik'
-import ReCAPTCHA from "react-google-recaptcha";
+import { useContext, createRef } from 'react';
+import { ResetPasswordSchema } from '../../utils/formValidations';
+import { useFormik } from 'formik';
+import ReCAPTCHA from 'react-google-recaptcha';
 import ApiContext from '../../context/ApiContext';
 import { Form, Input, Button } from 'antd';
-import constants from "../../common/constants";
-
+import constants from '../../common/constants';
 
 function Reset() {
   const [form] = Form.useForm();
   const recaptchaRef = createRef();
-  const { _sendEmailToResetPassword } = useContext(ApiContext)
+  const { _sendEmailToResetPassword } = useContext(ApiContext);
 
-
-  const { handleSubmit, handleChange, values, errors, touched, /*setFieldValue*/ } = useFormik({
+  const { handleSubmit, handleChange, values, errors, touched /*setFieldValue*/ } = useFormik({
     initialValues: {
       email: '',
       reCaptcha: ''
     },
     onSubmit: values => {
-      _sendEmailToResetPassword(values)
+      _sendEmailToResetPassword(values);
     },
 
-    validationSchema: ResetPasswordSchema,
+    validationSchema: ResetPasswordSchema
   });
-
-
 
   return (
     <>
       <div className="vh-100 d-flex justify-content-center">
         <div className="change-email-form my-auto">
           <div className="text-center">
-            <img className="mb-3" src={constants.logo} alt="logo" style={{ width: "176px", height: "66px" }} />
+            <img className="mb-3" src={constants.logo} alt="logo" style={{ width: '176px', height: '66px' }} />
             <div className="reset-form-title">Reset My Password</div>
           </div>
 
-          <Form
-            layout="vertical"
-            form={form}
-            onFinish={handleSubmit}
-          >
-
+          <Form layout="vertical" form={form} onFinish={handleSubmit}>
             <Form.Item
               name="email"
-              help={touched.email && errors.email ? errors.email : ""}
-              validateStatus={touched.email && errors.email ? "error" : "success"}
-            >
+              help={touched.email && errors.email ? errors.email : ''}
+              validateStatus={touched.email && errors.email ? 'error' : 'success'}>
               <Input
                 size="large"
                 type="text"
                 placeholder="Email Address"
-                onChange={handleChange("email")}
+                onChange={handleChange('email')}
                 value={values.email}
                 //onChange={(value) => setFieldValue("email", value)}
                 rules={[{ required: true, message: 'Please input your password!' }]}
@@ -75,16 +65,15 @@ function Reset() {
             </div>
 
             <Form.Item>
-              <Button size="large" htmlType="submit" className="btn-block" type="primary">Submit</Button>
+              <Button size="large" htmlType="submit" className="btn-block" type="primary">
+                Submit
+              </Button>
             </Form.Item>
           </Form>
-
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Reset
-
-
+export default Reset;

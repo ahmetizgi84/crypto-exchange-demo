@@ -52,8 +52,9 @@
     "local": "env-cmd -f .env.local react-scripts start",
     "test": "env-cmd -f .env.test react-scripts build",
     "dev-build": "env-cmd -f .env.dev react-scripts build",
-    "build": "react-scripts build CI= yarn build",
+    "build": "react-scripts build",
     "eject": "react-scripts eject",
+    "delete": "rm -rf node_modules/ && rm -rf yarn.lock",
     "doc": "react-doc-generator ./src/components -o DOCUMENTATION.md"
   },
   "eslintConfig": {
@@ -76,8 +77,6 @@
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",
-    "react-doc-generator": "^1.2.5",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^4.9.1"
+    "react-doc-generator": "^1.2.5"
   }
 }

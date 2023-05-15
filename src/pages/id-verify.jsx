@@ -1,7 +1,7 @@
-import { useContext, useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import ThemeContext from "../context/ThemeContext";
-import exchangeApi from "../api/exchangeApi";
+import { useContext, useEffect, useState } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import ThemeContext from '../context/ThemeContext';
+import exchangeApi from '../api/exchangeApi';
 
 function Idverify() {
   const { theme } = useContext(ThemeContext);
@@ -14,18 +14,18 @@ function Idverify() {
 
   const getTierRequiredInfoList = async () => {
     const params = {
-      tierSettingId: 9,
+      tierSettingId: 9
     };
 
     try {
-      const { data } = await exchangeApi.post("/TierRequiredInfo/List", params);
+      const { data } = await exchangeApi.post('/TierRequiredInfo/List', params);
       if (data.success) {
         //console.log(data.data.list);
         setTierRequiredInfo(data.data.list);
         setPassive(false);
       }
     } catch (error) {
-      console.log("Error in getTierRequiredInfoList: ", error.response);
+      console.log('Error in getTierRequiredInfoList: ', error.response);
     }
   };
 
@@ -35,8 +35,8 @@ function Idverify() {
         <form>
           <div className="text-center mt-4">
             <img
-              src={theme === "light" ? "./img/logo-dark.svg" : "./img/logo-light.svg"}
-              style={{ width: "176px", height: "66px" }}
+              src={theme === 'light' ? './img/logo-dark.svg' : './img/logo-light.svg'}
+              style={{ width: '176px', height: '66px' }}
               alt="logo"
             />
             <p className="h5 my-4">Get Verified your Government Issued ID </p>
@@ -89,7 +89,7 @@ function Idverify() {
           </Row>
 
           {/* Tier Required Infos */}
-          {tierRequiredInfo?.map((tierInfo) => {
+          {tierRequiredInfo?.map(tierInfo => {
             return (
               <div key={tierInfo.id}>
                 <Row className="justify-content-md-center align-items-center">
@@ -104,12 +104,11 @@ function Idverify() {
                     <div
                       className="d-flex align-items-center justify-content-center"
                       style={{
-                        width: "100%",
-                        height: "200px",
-                        border: "1px solid #ddd",
-                        borderStyle: "dashed",
-                      }}
-                    >
+                        width: '100%',
+                        height: '200px',
+                        border: '1px solid #ddd',
+                        borderStyle: 'dashed'
+                      }}>
                       <div className="text-center">
                         <button className="btn btn-sm btn-primary">UPLOAD</button>
                         <div>

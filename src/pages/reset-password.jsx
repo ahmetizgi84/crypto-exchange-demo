@@ -1,9 +1,9 @@
-import { useEffect, useContext } from "react";
-import ApiContext from "../context/ApiContext";
-import { Button, Container, Row, Col } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
-import ThemeContext from "../context/ThemeContext";
-import { CheckCircleFill, XCircleFill } from "react-bootstrap-icons";
+import { useEffect, useContext } from 'react';
+import ApiContext from '../context/ApiContext';
+import { Button, Container, Row, Col } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+import ThemeContext from '../context/ThemeContext';
+import { CheckCircleFill, XCircleFill } from 'react-bootstrap-icons';
 
 const ResetPassword = () => {
   const { theme } = useContext(ThemeContext);
@@ -15,9 +15,9 @@ const ResetPassword = () => {
    * Did system set a random password and send it to the user's email?
    */
   useEffect(() => {
-    const token = window.location.href.split("/").slice(-1)[0];
+    const token = window.location.href.split('/').slice(-1)[0];
     const payload = {
-      forgotPasswordKey: token,
+      forgotPasswordKey: token
     };
 
     _getForgotPasswordEmail(payload);
@@ -32,8 +32,8 @@ const ResetPassword = () => {
               <form>
                 <div className="text-center mt-4">
                   <img
-                    src={theme === "light" ? "../img/logo-dark.svg" : "../img/logo-light.svg"}
-                    style={{ width: "176px", height: "66px" }}
+                    src={theme === 'light' ? '../img/logo-dark.svg' : '../img/logo-light.svg'}
+                    style={{ width: '176px', height: '66px' }}
                     alt="logo"
                   />
                   <p className="h5 my-4">Error!</p>
@@ -53,7 +53,7 @@ const ResetPassword = () => {
 
                 <Row className="justify-content-md-center align-items-center mb-4">
                   <Col md={6}>
-                    <NavLink to="/login" style={{ textDecoration: "none", color: "white" }}>
+                    <NavLink to="/login" style={{ textDecoration: 'none', color: 'white' }}>
                       <Button type="button">Go to Login Page</Button>
                     </NavLink>
                   </Col>
@@ -74,8 +74,8 @@ const ResetPassword = () => {
             <form>
               <div className="text-center mt-4">
                 <img
-                  src={theme === "light" ? "../img/logo-dark.svg" : "../img/logo-light.svg"}
-                  style={{ width: "176px", height: "66px" }}
+                  src={theme === 'light' ? '../img/logo-dark.svg' : '../img/logo-light.svg'}
+                  style={{ width: '176px', height: '66px' }}
                   alt="logo"
                 />
                 <p className="h5 my-4">Success!</p>
@@ -95,7 +95,7 @@ const ResetPassword = () => {
 
               <Row className="justify-content-md-center align-items-center mb-4">
                 <Col md={6}>
-                  <NavLink to="/login" style={{ textDecoration: "none", color: "white" }}>
+                  <NavLink to="/login" style={{ textDecoration: 'none', color: 'white' }}>
                     <Button type="button">Go to Login Page</Button>
                   </NavLink>
                 </Col>

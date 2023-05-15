@@ -1,17 +1,17 @@
-import { useState, useContext, useEffect } from "react";
-import { Container, Col, Row, Tabs, Tab, Modal } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { Search } from "react-bootstrap-icons";
-import { OpenBox, CoinList, AddressBookList, NetworkList, Card } from "../../components";
-import ApiContext from "../../context/ApiContext";
-import { useFormik } from "formik";
-import * as yup from "yup";
-import cn from "classnames";
-import _ from "lodash";
+import { useState, useContext, useEffect } from 'react';
+import { Col, Row, Tabs, Tab, Modal } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { Search } from 'react-bootstrap-icons';
+import { OpenBox, CoinList, AddressBookList, NetworkList, Card } from '../../components';
+import ApiContext from '../../context/ApiContext';
+import { useFormik } from 'formik';
+import * as yup from 'yup';
+import cn from 'classnames';
+import _ from 'lodash';
 
 const Crypto = () => {
   const { _getCoinList, coinList, _getTransferNetwork, coinNetwork } = useContext(ApiContext);
-  const [key, setKey] = useState("newAddress");
+  const [key, setKey] = useState('newAddress');
   const [show, setShow] = useState(false);
   const [coin, setCoin] = useState({});
 
@@ -21,20 +21,20 @@ const Crypto = () => {
   const [coinNetworkModal, setCoinNetworkModal] = useState(false);
   const [selectedNetwork, setSelectedNetwork] = useState({});
 
-  const [amount, setAmount] = useState("");
+  const [amount, setAmount] = useState('');
 
   const addressBookDummy = [
     {
-      title: "My Kucoin address",
-      address: "0x8542fsd5fr55ssd5t78ww6w3e1gju1r1ds",
-      network: "ETH (ERC20)",
+      title: 'My Kucoin address',
+      address: '0x8542fsd5fr55ssd5t78ww6w3e1gju1r1ds',
+      network: 'ETH (ERC20)'
     },
 
     {
-      title: "My GateIo address",
-      address: "0x8542fsd5fr55ssd5t78ww6w3e1gju1r1ds",
-      network: "BTC (BEP20)",
-    },
+      title: 'My GateIo address',
+      address: '0x8542fsd5fr55ssd5t78ww6w3e1gju1r1ds',
+      network: 'BTC (BEP20)'
+    }
   ];
 
   function coinListHandler() {
@@ -54,7 +54,7 @@ const Crypto = () => {
   useEffect(() => {
     if (coin) {
       const payload = {
-        symbol: coin.symbol,
+        symbol: coin.symbol
       };
       _getTransferNetwork(payload);
     }
@@ -79,8 +79,8 @@ const Crypto = () => {
 
             <Row className="py-4">
               <Col md={12} xs={12}>
-                <Tabs id="controlled-tab-example" activeKey={key} onSelect={(k) => setKey(k)} className="mb-3">
-                  <Tab  eventKey="newAddress" title="New Address" tabClassName="pl-0">
+                <Tabs id="controlled-tab-example" activeKey={key} onSelect={k => setKey(k)} className="mb-3">
+                  <Tab eventKey="newAddress" title="New Address" tabClassName="pl-0">
                     <NewAddress setShow={setCoinNetworkModal} selectedNetwork={selectedNetwork} />
                     <NetworkListModal
                       setSelectedNetwork={setSelectedNetwork}
@@ -107,7 +107,6 @@ const Crypto = () => {
               <Row className="py-4">
                 <Col md={2} xs={12}>
                   <span className="dark-text-white"> Withdraw Amount</span>
-                 
                 </Col>
                 <Col md={10} xs={12}>
                   <div className="form-access">
@@ -118,7 +117,7 @@ const Crypto = () => {
                         className="form-control"
                         placeholder="Minimal 50"
                         value={amount}
-                        onChange={(e) => setAmount(e.target.value)}
+                        onChange={e => setAmount(e.target.value)}
                       />
                     </div>
                   </div>
@@ -133,10 +132,7 @@ const Crypto = () => {
             {amount && parseInt(amount) - 20 > 0 && (
               <Row className="py-4">
                 <Col md={2} xs={12}>
-                  <span className="dark-text-white">
-                  Receive Amount
-                  </span>
-                  
+                  <span className="dark-text-white">Receive Amount</span>
                 </Col>
                 <Col md={7} xs={12}>
                   <div className="form-access">
@@ -155,7 +151,7 @@ const Crypto = () => {
         </Col>
 
         <Col md={4}>
-          <div style={{ backgroundColor: "#FAFAFA", height: "100%" }}>Related Links</div>
+          <div style={{ backgroundColor: '#FAFAFA', height: '100%' }}>Related Links</div>
         </Col>
       </Row>
     </div>
@@ -174,16 +170,16 @@ function CoinModal({ show, setShow, setCoin }) {
     }
   }, [coinList]);
 
-  const onClickHandler = (item) => {
+  const onClickHandler = item => {
     setCoin(item);
     setShow(false);
   };
 
-  const handleChange = (event) => {
+  const handleChange = event => {
     let filtertext = event.target.value;
-    filtertext = filtertext ? filtertext.toUpperCase() : "";
+    filtertext = filtertext ? filtertext.toUpperCase() : '';
 
-    let filteredData = _.filter(coinList, (item) => {
+    let filteredData = _.filter(coinList, item => {
       return item.symbol.includes(filtertext);
     });
 
@@ -199,7 +195,7 @@ function CoinModal({ show, setShow, setCoin }) {
       <Modal.Body>
         <div className="form-access px-3">
           <div className="form-group">
-            <input type="text" name="search" className={"form-control"} placeholder="Search" onChange={handleChange} />
+            <input type="text" name="search" className={'form-control'} placeholder="Search" onChange={handleChange} />
           </div>
         </div>
         <div className="my-3">
@@ -217,23 +213,23 @@ function NewAddress({ setShow, selectedNetwork }) {
   if (selectedNetwork && Object.keys(selectedNetwork).length > 0) {
     val = {
       key: selectedNetwork?.networkCode,
-      value: selectedNetwork?.label,
+      value: selectedNetwork?.label
     };
 
     let incomingRegex = selectedNetwork.addressVerificationRegex;
-    let parsedRegex = incomingRegex.replace("/", "");
-    let oldRegex = parsedRegex.replace("/", "");
+    let parsedRegex = incomingRegex.replace('/', '');
+    let oldRegex = parsedRegex.replace('/', '');
     const newRegex = new RegExp(oldRegex);
 
     schema = yup.object().shape({
       address: yup
         .string()
-        .required("Required field")
+        .required('Required field')
         .matches(
           newRegex,
-          "The withdrawal address format is wrong. Please check the withdrawal address length and character content and try again"
+          'The withdrawal address format is wrong. Please check the withdrawal address length and character content and try again'
         ),
-      amount: yup.string().required("Required field"),
+      amount: yup.string().required('Required field')
     });
   }
 
@@ -241,19 +237,19 @@ function NewAddress({ setShow, selectedNetwork }) {
     enableReinitialize: true,
 
     initialValues: {
-      address: "",
-      amount: "",
+      address: '',
+      amount: ''
     },
 
-    onSubmit: (values) => {
+    onSubmit: values => {
       submitForm(values);
     },
 
-    validationSchema: schema,
+    validationSchema: schema
   });
 
-  const submitForm = (values) => {
-    console.log("values: ", values);
+  const submitForm = values => {
+    console.log('values: ', values);
   };
 
   return (
@@ -269,10 +265,10 @@ function NewAddress({ setShow, selectedNetwork }) {
           <input
             type="text"
             name="address"
-            className={cn(["form-control", errors.address && touched.address && "is-invalid"])}
+            className={cn(['form-control', errors.address && touched.address && 'is-invalid'])}
             placeholder="Enter address here"
-            value={values.address || ""}
-            onChange={handleChange("address")}
+            value={values.address || ''}
+            onChange={handleChange('address')}
             disabled={selectedNetwork && Object.keys(selectedNetwork).length > 0 ? false : true}
           />
           {errors.address && touched.address && <div className="invalid-feedback">{errors.address}</div>}
@@ -283,10 +279,10 @@ function NewAddress({ setShow, selectedNetwork }) {
           <input
             type="text"
             name="amount"
-            className={cn(["form-control", errors.amount && touched.amount && "is-invalid"])}
+            className={cn(['form-control', errors.amount && touched.amount && 'is-invalid'])}
             placeholder="Enter amount"
-            value={values.amount || ""}
-            onChange={handleChange("amount")}
+            value={values.amount || ''}
+            onChange={handleChange('amount')}
             disabled={selectedNetwork && Object.keys(selectedNetwork).length > 0 ? false : true}
           />
           {errors.amount && touched.amount && <div className="invalid-feedback">{errors.amount}</div>}
@@ -296,8 +292,7 @@ function NewAddress({ setShow, selectedNetwork }) {
           <button
             type="submit"
             className="btn btn-block btn-warning"
-            disabled={selectedNetwork && Object.keys(selectedNetwork).length > 0 ? false : true}
-          >
+            disabled={selectedNetwork && Object.keys(selectedNetwork).length > 0 ? false : true}>
             Transfer
           </button>
         </div>
@@ -307,12 +302,12 @@ function NewAddress({ setShow, selectedNetwork }) {
 }
 
 function NetworkListModal({ show, setShow, coinNetwork, setSelectedNetwork }) {
-  const onPressHandler = (item) => {
+  const onPressHandler = item => {
     setSelectedNetwork(item);
     setShow(false);
   };
 
-  console.log("coinNetwork: ", coinNetwork);
+  console.log('coinNetwork: ', coinNetwork);
 
   return (
     <Modal backdrop="static" scrollable={true} animation={false} show={show} onHide={() => setShow(false)}>
@@ -375,7 +370,7 @@ function AddressBook({ setShow, addressBook }) {
 }
 
 function AdressBookModal({ show, setShow, addressBook, setAddressBook }) {
-  const onPressHandler = (item) => {
+  const onPressHandler = item => {
     setAddressBook(item);
     setShow(false);
   };

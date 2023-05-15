@@ -1,0 +1,102 @@
+{
+    "$schema": "https://json.schemastore.org/eslintrc",
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "rules": {
+        /* "indent": [
+            "",
+            2
+        ], */
+        /* "linebreak-style": [
+            "error",
+            "windows"
+        ], */
+        /* "quotes": [
+            "warn",
+            "single"
+        ], */
+        "semi": [
+            "off",
+            "always"
+        ],
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off",
+        "react/no-unescaped-entities": "off",
+        "prefer-rest-params": "off",
+        "prefer-const": "off", // TODO error
+        "@typescript-eslint/no-inferrable-types": "warn", // TODO error
+        "@typescript-eslint/ban-types": "warn", // TODO error
+        "comma-dangle": [
+            "off",
+            "never"
+        ],
+        "no-var": "warn",
+        "no-extra-semi": "warn",
+        "no-debugger":"off",
+        "no-unused-vars": "off",
+        "no-shadow": "off",
+        "no-undef": "off",
+        "no-redeclare": "off",
+        "no-extra-boolean-cast": "off",
+        "@typescript-eslint/no-shadow": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-unused-vars": "off", // TODO error
+        "@typescript-eslint/no-explicit-any": "off", // TODO error
+        "@typescript-eslint/no-non-null-assertion": "warn", // TODO error
+        "react/display-name": "off",
+        "@typescript-eslint/comma-dangle": [
+            "warn",
+            "only-multiline"
+        ],
+        "@typescript-eslint/no-empty-function": "warn", // TODO error
+        "@typescript-eslint/no-this-alias": "warn",
+        "@typescript-eslint/no-empty-interface": [
+            "warn",
+            {
+                "allowSingleExtends": true
+            }
+        ]
+    },
+     "overrides": [
+    {
+      "files": ["*.ts", "*.mts", "*.cts", "*.tsx", "*.js"],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": "off"
+      }
+    },
+    {
+      // enable the rule specifically for TypeScript files
+      "files": ["*.ts", "*.mts", "*.cts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": "off"
+      }
+    }
+  ]
+}
+

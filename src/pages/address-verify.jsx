@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import ThemeContext from "../context/ThemeContext";
+import React, { useContext } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import ThemeContext from '../context/ThemeContext';
 
 const AddressVerify = () => {
   const { theme } = useContext(ThemeContext);
@@ -10,8 +10,8 @@ const AddressVerify = () => {
         <form>
           <div className="text-center mt-4">
             <img
-              src={theme === "light" ? "./img/logo-dark.svg" : "./img/logo-light.svg"}
-              style={{ width: "176px", height: "66px" }}
+              src={theme === 'light' ? './img/logo-dark.svg' : './img/logo-light.svg'}
+              style={{ width: '176px', height: '66px' }}
               alt="logo"
             />
             <p className="h5 my-4">Residence verification</p>
@@ -79,12 +79,11 @@ const AddressVerify = () => {
               <div
                 className="d-flex align-items-center justify-content-center"
                 style={{
-                  width: "100%",
-                  height: "160px",
-                  border: "1px solid #ddd",
-                  borderStyle: "dashed",
-                }}
-              >
+                  width: '100%',
+                  height: '160px',
+                  border: '1px solid #ddd',
+                  borderStyle: 'dashed'
+                }}>
                 <div className="text-center">
                   <button className="btn btn-sm btn-primary">UPLOAD</button>
                   <div>

@@ -1,24 +1,24 @@
-import { useState, useEffect } from "react";
-import { useContext } from "react";
-import exchangeApi from "../../api/exchangeApi";
-import ApiContext from "../../context/ApiContext";
-import { Context as AuthContext } from "../../context/AuthContext";
-import _ from "lodash";
-import { WoynexTable } from "../../components";
-import { currencyFormatter } from "../../helper/currencyFormatter";
+import { useState, useEffect } from 'react';
+import { useContext } from 'react';
+// import exchangeApi from "../../api/exchangeApi";
+import ApiContext from '../../context/ApiContext';
+import { Context as AuthContext } from '../../context/AuthContext';
+import _ from 'lodash';
+import { WoynexTable } from '../../components';
+import { currencyFormatter } from '../../helper/currencyFormatter';
 
 function LatestTransactions(props) {
   const { accountList, coin } = props;
   const [address, setAddress] = useState({});
   const [latestTransactions, setLatestTransactions] = useState([]);
   const {
-    state: { isLoggedIn },
+    state: { isLoggedIn }
   } = useContext(AuthContext);
   const { loading } = useContext(ApiContext);
 
   useEffect(() => {
     if (accountList.length) {
-      const address = accountList?.find((account) => account.coin === coin?.asset) || {};
+      const address = accountList?.find(account => account.coin === coin?.asset) || {};
       setAddress(address);
     }
   }, [accountList, coin]);
@@ -49,39 +49,39 @@ function LatestTransactions(props) {
 
   const columns = [
     {
-      title: "NO.",
-      dataIndex: "no.",
-      key: "no.",
-      sorter: true,
+      title: 'NO.',
+      dataIndex: 'no.',
+      key: 'no.',
+      sorter: true
     },
     {
-      title: "Date",
-      dataIndex: "time",
-      render: (time) => getHumanDate(time),
-      key: "time",
-      sorter: true,
+      title: 'Date',
+      dataIndex: 'time',
+      render: time => getHumanDate(time),
+      key: 'time',
+      sorter: true
     },
     {
-      title: "Status",
-      dataIndex: "Status",
+      title: 'Status',
+      dataIndex: 'Status',
       //render: (symbol) => `${symbol}`,
-      key: "symbol",
-      sorter: true,
+      key: 'symbol',
+      sorter: true
     },
     {
-      title: "Amount",
-      dataIndex: "amount",
-      render: (amount) => currencyFormatter(amount),
-      key: "amount",
-    },
+      title: 'Amount',
+      dataIndex: 'amount',
+      render: amount => currencyFormatter(amount),
+      key: 'amount'
+    }
   ];
-  const getHumanDate = (time) => {
+  const getHumanDate = time => {
     let fullDate = new Date(time);
     return fullDate.toLocaleString();
   };
 
   const handleTableChange = (pagination, filters, sorter) => {
-    const latestTransactions = _.orderBy(latestTransactions, sorter.field, sorter.order === "ascend" ? "asc" : "desc");
+    const latestTransactions = _.orderBy(latestTransactions, sorter.field, sorter.order === 'ascend' ? 'asc' : 'desc');
     setLatestTransactions(latestTransactions);
   };
 
@@ -96,7 +96,7 @@ function LatestTransactions(props) {
             list={latestTransactions}
             size="small"
             onChange={handleTableChange}
-            rowKey={(record) => record.orderId}
+            rowKey={record => record.orderId}
             pageSize={5}
             loading={loading}
             isLoggedIn={isLoggedIn}

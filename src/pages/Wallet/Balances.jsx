@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
-import _ from "lodash";
+import { NavLink } from 'react-router-dom';
+// import _ from "lodash";
 
 function Balances(props) {
   const { coin } = props;

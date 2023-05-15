@@ -56,8 +56,9 @@ function BalanceDetails() {
     if (accountList && accountList.length > 0) {
       let tempList = [...accountList];
       tempList.map((item, idx) => {
-        if (item.coin === "BTC") {
-        }
+        // if (item.coin === "BTC") {
+
+        // }
         item.title = item.coin;
         item.value = item.totalBalance;
         item.color = colors[idx];
@@ -106,9 +107,9 @@ function BalanceDetails() {
             <PieChart
               data={data}
               radius={PieChart.defaultProps.radius - shiftSize}
-              segmentsShift={(index) => (index === 0 ? shiftSize : 0.5)}
-              segmentsStyle={{ transition: "stroke .3s", cursor: "pointer" }}
+              // segmentsShift={(index) => (index === 0 ? shiftSize : 0.5)}
               segmentsShift={(index) => (index === selected ? 6 : 1)}
+              segmentsStyle={{ transition: "stroke .3s", cursor: "pointer" }}
               animate
               style={{ height: "180px" }}
               label={({ dataEntry }) => Math.round(dataEntry.percentage) + "%"}

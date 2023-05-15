@@ -1,6 +1,6 @@
 import * as yup from 'yup';
 
-const validationMessage = "Required Field";
+const validationMessage = 'Required Field';
 
 // const bDateValidator = (date = null) => {
 //   if (date) {
@@ -26,7 +26,7 @@ const validationMessage = "Required Field";
 //   }
 // }
 
-const verifyIdentityNo = (TCNO) => {
+const verifyIdentityNo = TCNO => {
   let tek = 0,
     cift = 0,
     sonuc = 0,
@@ -35,9 +35,14 @@ const verifyIdentityNo = (TCNO) => {
   if (TCNO) {
     if (TCNO.length !== 11) return false;
     if (isNaN(parseInt(TCNO))) return false;
-    if (TCNO.charAt(0) === "0") return false;
+    if (TCNO.charAt(0) === '0') return false;
 
-    tek = parseInt(TCNO.charAt(0)) + parseInt(TCNO.charAt(2)) + parseInt(TCNO.charAt(4)) + parseInt(TCNO.charAt(6)) + parseInt(TCNO.charAt(8));
+    tek =
+      parseInt(TCNO.charAt(0)) +
+      parseInt(TCNO.charAt(2)) +
+      parseInt(TCNO.charAt(4)) +
+      parseInt(TCNO.charAt(6)) +
+      parseInt(TCNO.charAt(8));
     cift = parseInt(TCNO.charAt(1)) + parseInt(TCNO.charAt(3)) + parseInt(TCNO.charAt(5)) + parseInt(TCNO.charAt(7));
 
     tek = tek * 7;
@@ -52,48 +57,48 @@ const verifyIdentityNo = (TCNO) => {
 
     return true;
   }
-}
+};
 
-const verifyTaxNumber = (kno) => {
+const verifyTaxNumber = kno => {
   if (kno) {
     if (kno.length === 10) {
-      let v = []
-      let lastDigit = Number(kno.charAt(9))
+      let v = [];
+      let lastDigit = Number(kno.charAt(9));
       for (let i = 0; i < 9; i++) {
-        let tmp = (Number(kno.charAt(i)) + (9 - i)) % 10
-        v[i] = (tmp * 2 ** (9 - i)) % 9
-        if (tmp !== 0 && v[i] === 0) v[i] = 9
+        let tmp = (Number(kno.charAt(i)) + (9 - i)) % 10;
+        v[i] = (tmp * 2 ** (9 - i)) % 9;
+        if (tmp !== 0 && v[i] === 0) v[i] = 9;
       }
-      let sum = v.reduce((a, b) => a + b, 0) % 10
-      return (10 - (sum % 10)) % 10 === lastDigit
+      let sum = v.reduce((a, b) => a + b, 0) % 10;
+      return (10 - (sum % 10)) % 10 === lastDigit;
     }
-    return false
+    return false;
   }
-}
+};
 
 function validateIBAN(iban) {
   if (iban) {
-    var newIban = iban.toUpperCase().split(' ').join('')
+    let newIban = iban.toUpperCase().split(' ').join('');
     let modulo = function (divident, divisor) {
-      var cDivident = "";
-      var cRest = "";
+      let cDivident = '';
+      let cRest = '';
 
-      for (var i in divident) {
-        var cChar = divident[i];
-        var cOperator = cRest + "" + cDivident + "" + cChar;
+      for (let i in divident) {
+        let cChar = divident[i];
+        let cOperator = cRest + '' + cDivident + '' + cChar;
 
         if (cOperator < parseInt(divisor)) {
-          cDivident += "" + cChar;
+          cDivident += '' + cChar;
         } else {
           cRest = cOperator % divisor;
           if (cRest === 0) {
-            cRest = "";
+            cRest = '';
           }
-          cDivident = "";
+          cDivident = '';
         }
       }
-      cRest += "" + cDivident;
-      if (cRest === "") {
+      cRest += '' + cDivident;
+      if (cRest === '') {
         cRest = 0;
       }
       return cRest;
@@ -110,22 +115,13 @@ function validateIBAN(iban) {
     });
 
     return parseInt(modulo(newIban, 97), 10) === 1;
-
   }
 }
 
-
 const LoginSchema = yup.object().shape({
-  email: yup
-    .string()
-    .email('Enter a valid email address')
-    .required(validationMessage),
-  password: yup
-    .string()
-    .required(validationMessage),
-  reCaptcha: yup
-    .string()
-    .required(validationMessage)
+  email: yup.string().email('Enter a valid email address').required(validationMessage),
+  password: yup.string().required(validationMessage),
+  reCaptcha: yup.string().required(validationMessage)
 });
 
 const RegisterSchemaIndividual = yup.object().shape({
@@ -135,24 +131,17 @@ const RegisterSchemaIndividual = yup.object().shape({
     .max(11, 'ID number cannot be more than 11 digits.')
     .test('test-identityNo', 'Enter a valid ID number', identityNo => verifyIdentityNo(identityNo))
     .required(validationMessage),
-  email: yup
-    .string()
-    .email('Enter a valid email address')
-    .required(validationMessage),
+  email: yup.string().email('Enter a valid email address').required(validationMessage),
   name: yup
     .string()
-    .matches(/^[aA-zZğüşöçıİĞÜŞÖÇ\s]+$/, "Use only letters for this field!")
+    .matches(/^[aA-zZğüşöçıİĞÜŞÖÇ\s]+$/, 'Use only letters for this field!')
     .required(validationMessage),
   surname: yup
     .string()
-    .matches(/^[aA-zZğüşöçıİĞÜŞÖÇ\s]+$/, "Use only letters for this field!")
+    .matches(/^[aA-zZğüşöçıİĞÜŞÖÇ\s]+$/, 'Use only letters for this field!')
     .required(validationMessage),
-  birthDate: yup
-    .string()
-    .required(validationMessage),
-  phoneNumber: yup
-    .string()
-    .required(validationMessage),
+  birthDate: yup.string().required(validationMessage),
+  phoneNumber: yup.string().required(validationMessage),
   password: yup
     .string()
     .min(8, ({ min }) => 'Password must be at least ' + min + ' characters!')
@@ -161,22 +150,18 @@ const RegisterSchemaIndividual = yup.object().shape({
     .matches(/\d/, 'Must contain at least one digit!')
     .matches(/[!@#$%^&*()\-_"=+{}; :,<.>]/, 'Must contain at least one special character!')
     .required(validationMessage),
-  rePassword: yup.string()
-    .oneOf([yup.ref('password'), null], 'Passwords do not match!'),
-  referralID: yup
-    .string(),
-  reCaptcha: yup
-    .string()
-    .required(validationMessage),
+  rePassword: yup.string().oneOf([yup.ref('password'), null], 'Passwords do not match!'),
+  referralID: yup.string(),
+  reCaptcha: yup.string().required(validationMessage),
   termsOne: yup.bool().required().oneOf([true], 'Terms must be accepted'),
   termsTwo: yup.bool().required().oneOf([true], 'Terms must be accepted'),
-  termsThree: yup.bool().required().oneOf([true], 'Terms must be accepted'),
+  termsThree: yup.bool().required().oneOf([true], 'Terms must be accepted')
 });
 
 const RegisterSchemaCorporate = yup.object().shape({
   tenantName: yup
     .string()
-    .matches(/^[aA-zZğüşöçıİĞÜŞÖÇ\s]+$/, "Use only letters for this field!")
+    .matches(/^[aA-zZğüşöçıİĞÜŞÖÇ\s]+$/, 'Use only letters for this field!')
     .required(validationMessage),
   identificationNo: yup
     .string()
@@ -184,44 +169,33 @@ const RegisterSchemaCorporate = yup.object().shape({
     .required(validationMessage),
   subjectOfActivity: yup
     .string()
-    .matches(/^[aA-zZğüşöçıİĞÜŞÖÇ\s]+$/, "Use only letters for this field!")
+    .matches(/^[aA-zZğüşöçıİĞÜŞÖÇ\s]+$/, 'Use only letters for this field!')
     .required(validationMessage),
   taxOffice: yup
     .string()
-    .matches(/^[aA-zZğüşöçıİĞÜŞÖÇ\s]+$/, "Use only letters for this field!")
+    .matches(/^[aA-zZğüşöçıİĞÜŞÖÇ\s]+$/, 'Use only letters for this field!')
     .required(validationMessage),
-  tradeRegisterNumber: yup
-    .string()
-    .required(validationMessage),
-  address: yup
-    .string()
-    .required(validationMessage),
+  tradeRegisterNumber: yup.string().required(validationMessage),
+  address: yup.string().required(validationMessage),
   website: yup
     .string()
     .required(validationMessage)
-    .matches(/^((http|https):\/\/)?(www.)?(?!.*(http|https|www.))[a-zA-Z0-9_-]+(\.[a-zA-Z]+)+(\/)?.([\w[a-zA-Z-_%@?]+)*([^\w[a-zA-Z0-9_-]+=\w+(&[a-zA-Z0-9_]+=\w+)*)?$/, 'Enter correct url!'),
-  workPhoneNumber: yup
-    .string()
-    .required(validationMessage),
-  workEmail: yup
-    .string()
-    .email('Enter a valid email address')
-    .required(validationMessage),
+    .matches(
+      /^((http|https):\/\/)?(www.)?(?!.*(http|https|www.))[a-zA-Z0-9_-]+(\.[a-zA-Z]+)+(\/)?.([\w[a-zA-Z-_%@?]+)*([^\w[a-zA-Z0-9_-]+=\w+(&[a-zA-Z0-9_]+=\w+)*)?$/,
+      'Enter correct url!'
+    ),
+  workPhoneNumber: yup.string().required(validationMessage),
+  workEmail: yup.string().email('Enter a valid email address').required(validationMessage),
   name: yup
     .string()
-    .matches(/^[aA-zZğüşöçıİĞÜŞÖÇ\s]+$/, "Use only letters for this field!")
+    .matches(/^[aA-zZğüşöçıİĞÜŞÖÇ\s]+$/, 'Use only letters for this field!')
     .required(validationMessage),
   surname: yup
     .string()
-    .matches(/^[aA-zZğüşöçıİĞÜŞÖÇ\s]+$/, "Use only letters for this field!")
+    .matches(/^[aA-zZğüşöçıİĞÜŞÖÇ\s]+$/, 'Use only letters for this field!')
     .required(validationMessage),
-  mobileNumber: yup
-    .string()
-    .required(validationMessage),
-  email: yup
-    .string()
-    .email('Enter a valid email address')
-    .required(validationMessage),
+  mobileNumber: yup.string().required(validationMessage),
+  email: yup.string().email('Enter a valid email address').required(validationMessage),
   password: yup
     .string()
     .min(8, ({ min }) => 'Password must be at least ' + min + ' characters!')
@@ -230,21 +204,15 @@ const RegisterSchemaCorporate = yup.object().shape({
     .matches(/\d/, 'Must contain at least one digit!')
     .matches(/[!@#$%^&*()\-_"=+{}; :,<.>]/, 'Must contain at least one special character!')
     .required(validationMessage),
-  rePassword: yup
-    .string()
-    .oneOf([yup.ref('password'), null], 'Passwords do not match!'),
-  reCaptcha: yup
-    .string()
-    .required(validationMessage),
+  rePassword: yup.string().oneOf([yup.ref('password'), null], 'Passwords do not match!'),
+  reCaptcha: yup.string().required(validationMessage),
   termsOne: yup.bool().required().oneOf([true], 'Terms must be accepted'),
   termsTwo: yup.bool().required().oneOf([true], 'Terms must be accepted'),
-  termsThree: yup.bool().required().oneOf([true], 'Terms must be accepted'),
+  termsThree: yup.bool().required().oneOf([true], 'Terms must be accepted')
 });
 
 const UpdatePasswordSchema = yup.object().shape({
-  currentPassword: yup
-    .string()
-    .required(validationMessage),
+  currentPassword: yup.string().required(validationMessage),
   newPassword: yup
     .string()
     .required(validationMessage)
@@ -256,16 +224,9 @@ const UpdatePasswordSchema = yup.object().shape({
 });
 
 const ResetPasswordSchema = yup.object().shape({
-  email: yup
-    .string()
-    .email('Enter a valid email address')
-    .required(validationMessage),
-  reCaptcha: yup
-    .string()
-    .required(validationMessage)
+  email: yup.string().email('Enter a valid email address').required(validationMessage),
+  reCaptcha: yup.string().required(validationMessage)
 });
-
-
 
 const CreateSubAccountSchema = yup.object().shape({
   identificationNo: yup
@@ -276,22 +237,15 @@ const CreateSubAccountSchema = yup.object().shape({
     .required(validationMessage),
   name: yup
     .string()
-    .matches(/^[aA-zZğüşöçıİĞÜŞÖÇ\s]+$/, "Bu alan için yalnızca harf kullanmalısınız!")
+    .matches(/^[aA-zZğüşöçıİĞÜŞÖÇ\s]+$/, 'Bu alan için yalnızca harf kullanmalısınız!')
     .required(validationMessage),
   surname: yup
     .string()
-    .matches(/^[aA-zZğüşöçıİĞÜŞÖÇ\s]+$/, "Bu alan için yalnızca harf kullanmalısınız!")
+    .matches(/^[aA-zZğüşöçıİĞÜŞÖÇ\s]+$/, 'Bu alan için yalnızca harf kullanmalısınız!')
     .required(validationMessage),
-  email: yup
-    .string()
-    .email('Geçerli bir eposta adresi girin')
-    .required(validationMessage),
-  birthDate: yup
-    .string()
-    .required(validationMessage),
-  phone: yup
-    .string()
-    .required(validationMessage),
+  email: yup.string().email('Geçerli bir eposta adresi girin').required(validationMessage),
+  birthDate: yup.string().required(validationMessage),
+  phone: yup.string().required(validationMessage),
   password: yup
     .string()
     .min(8, ({ min }) => 'Şifre en az ' + min + ' karakter olmalıdır!')
@@ -300,14 +254,9 @@ const CreateSubAccountSchema = yup.object().shape({
     .matches(/\d/, 'En az bir adet rakam içermelidir!')
     .matches(/[!@#$%^&*()\-_"=+{}; :,<.>]/, 'En az bir adet özel karakter içermelidir!')
     .required(validationMessage),
-  passwordConfirmation: yup.string()
-    .oneOf([yup.ref('password'), null], 'Şifreler eşleşmiyor!'),
-  referralID: yup
-    .string()
-    .required(validationMessage),
-  role: yup
-    .string()
-    .required(validationMessage),
+  passwordConfirmation: yup.string().oneOf([yup.ref('password'), null], 'Şifreler eşleşmiyor!'),
+  referralID: yup.string().required(validationMessage),
+  role: yup.string().required(validationMessage)
   //terms: yup.bool().required().oneOf([true], 'Terms must be accepted'),
 });
 
@@ -315,78 +264,49 @@ const BankAccountSchema = yup.object().shape({
   name: yup
     .string()
     .min(3, ({ min }) => 'at least ' + min + ' characters!')
-    .matches(/^[aA-zZğüşöçıİĞÜŞÖÇ\s]+$/, "Only letters allowed for this field!")
+    .matches(/^[aA-zZğüşöçıİĞÜŞÖÇ\s]+$/, 'Only letters allowed for this field!')
     .required(validationMessage),
   ownerName: yup
     .string()
     .min(3, ({ min }) => 'at least ' + min + ' characters!')
-    .matches(/^[aA-zZğüşöçıİĞÜŞÖÇ\s]+$/, "Only letters allowed for this field!")
+    .matches(/^[aA-zZğüşöçıİĞÜŞÖÇ\s]+$/, 'Only letters allowed for this field!')
     .required(validationMessage),
-  bankName: yup
-    .string()
-    .required(validationMessage),
+  bankName: yup.string().required(validationMessage),
   iban: yup
     .string()
     .required(validationMessage)
     .test('test-ibanNumber', 'Enter a valid iban number', iban => validateIBAN(iban)),
-  currencyType: yup
-    .string()
-    .required(validationMessage),
+  currencyType: yup.string().required(validationMessage)
 });
-
-
 
 const AddWhitelistIpSchema = yup.object().shape({
-  label: yup
-    .string()
-    .required(validationMessage),
+  label: yup.string().required(validationMessage),
   ip: yup
     .string()
-    .matches(/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/,
-      "Enter valid IP address!")
-    .required(validationMessage),
+    .matches(
+      /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/,
+      'Enter valid IP address!'
+    )
+    .required(validationMessage)
 });
 
-
 const AddWhitelistAddressesSchemaOne = yup.object().shape({
-  label: yup
-    .string()
-    .required(validationMessage),
-  coin: yup
-    .string()
-    .required(validationMessage),
-  address: yup
-    .string()
-    .required(validationMessage),
-  network: yup
-    .string()
-    .required(validationMessage),
-  originType: yup
-    .string()
-    .required(validationMessage),
+  label: yup.string().required(validationMessage),
+  coin: yup.string().required(validationMessage),
+  address: yup.string().required(validationMessage),
+  network: yup.string().required(validationMessage),
+  originType: yup.string().required(validationMessage)
 });
 
 const AddWhitelistAddressesSchemaTwo = yup.object().shape({
-  label: yup
-    .string()
-    .required(validationMessage),
-  address: yup
-    .string()
-    .required(validationMessage),
-  network: yup
-    .string()
-    .required(validationMessage),
-  originType: yup
-    .string()
-    .required(validationMessage),
+  label: yup.string().required(validationMessage),
+  address: yup.string().required(validationMessage),
+  network: yup.string().required(validationMessage),
+  originType: yup.string().required(validationMessage)
 });
 
-
 const ChangeEmailSchema = yup.object().shape({
-  email: yup
-    .string()
-    .email('Enter a valid email address')
-    .required(validationMessage),
+  email: yup.string().email('Enter a valid email address').required(validationMessage)
 });
 const ChangePhoneSchema = yup.object().shape({
   phoneNumber: yup
@@ -395,10 +315,8 @@ const ChangePhoneSchema = yup.object().shape({
     //   /([\+]90?)([ ]?)(\([0-9]{3}\))([0-9]{3})([0-9]{2})([0-9]{2})/,
     //   "Telephone number is invalid"
     //   )
-    .required(validationMessage),
+    .required(validationMessage)
 });
-
-
 
 export {
   LoginSchema,
