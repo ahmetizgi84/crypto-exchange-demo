@@ -52,7 +52,7 @@
     "local": "env-cmd -f .env.local react-scripts start",
     "test": "env-cmd -f .env.test react-scripts build",
     "dev-build": "env-cmd -f .env.dev react-scripts build",
-    "build": "react-scripts build",
+    "build": "react-scripts build CI= yarn build",
     "eject": "react-scripts eject",
     "doc": "react-doc-generator ./src/components -o DOCUMENTATION.md"
   },
